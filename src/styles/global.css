@@ -1,2 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
 @import "tailwindcss";
+
 @plugin '@tailwindcss/typography';
+
+@theme {
+	--font-msmadi: "Ms Madi", cursive;
+}
