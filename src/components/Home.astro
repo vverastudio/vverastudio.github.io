@@ -1,32 +1,84 @@
 ---
 import { Image } from 'astro:assets';
 import FlowerSaturated from '../assets/flower-saturated.png';
+import TitleWeronikaKubala from '../assets/title-weronika-kubala.svg';
+import TitleOMojejDrodze from '../assets/title-o-mojej-drodze.svg';
+import QuoteJestemStworzonaZebyTworzyc from '../assets/quote-jestem-stworzona-zeby-tworzyc.svg';
+import QuoteCzujeSieNajbardziej from '../assets/quote-czuje-sie-najbardziej-zywa-kiedy-ciagle-probuje.svg';
+import QuoteBadzmyWKontakcie from '../assets/quote-badzmy-w-kontakcie.svg';
+import PhotoGrid from '../assets/photo-grid.png';
 ---
 
-<main class="h-screen flex flex-col justify-center items-center">
-  <p class="font-msmadi text-xl mb-10">trwa proces twórczy</p>
-  <div>
+<main class="">
+  <!-- <p class="font-msmadi text-xl mb-10">trwa proces twórczy</p> -->
+  <section id="o-mnie" class="flex flex-col justify-center items-center">
+    <h1 class="sr-only">O mnie</h1>
+    <Image src={TitleWeronikaKubala} alt="Weronika Kubala" class="mt-48" />
+    <p class="font-poppins font-light max-w-56 ml-24 mt-20 mb-12">
+      Całe dotychczasowe życie spędziłam na odkrywaniu jednej prawdy o sobie:
+    </p>
     <Image
-      class="interactive-flower w-48 rotate-[var(--flower-swing,0deg)] translate-x-12"
-      src={FlowerSaturated}
-      alt="Flower"
-      role="presentation"
+      src={QuoteJestemStworzonaZebyTworzyc}
+      alt="Jestem stworzona żeby tworzyć"
+      class="ml-28"
     />
-    <div class="flex">
+    <div class="my-12">
       <Image
-        class="interactive-flower w-48 rotate-[var(--flower-swing,0deg)] -scale-x-100 -translate-y-10"
+        class="interactive-flower w-48 rotate-[var(--flower-swing,0deg)] translate-x-12"
         src={FlowerSaturated}
         alt="Flower"
         role="presentation"
       />
+      <div class="flex">
+        <Image
+          class="interactive-flower w-48 rotate-[var(--flower-swing,0deg)] -scale-x-100 -translate-y-10"
+          src={FlowerSaturated}
+          alt="Flower"
+          role="presentation"
+        />
+        <Image
+          class="interactive-flower w-48 rotate-[var(--flower-swing,0deg)] -translate-x-15 -translate-y-15"
+          src={FlowerSaturated}
+          alt="Flower"
+          role="presentation"
+        />
+      </div>
+    </div>
+  </section>
+  <section class="flex justify-center">
+    <div>
+      <h1 class="sr-only">O mojej drodze</h1>
+
+      <Image src={TitleOMojejDrodze} alt="O mojej drodze" />
+    </div>
+    <div class="ml-20 p-6 flex flex-col">
+      <p class="w-[19rem] font-poppins font-light mr-16">
+        Mam 24 lata.
+        <br />
+        Od dzieciństwa szukałam swojego miejsca w artystycznym świecie. Próbowałam
+        odnaleźć go w śpiewie solowym, pisaniu książek, modzie, blogowaniu, vlogowaniu,
+        prowadzeniu social mediów, tworzeniu grafik, pieczeniu i dekorowaniu tortów,
+        <br />graniu na gitarze i pianinie.
+        <br />
+        Z czasem traciłam zainteresowanie, a kiedy coś się nie udawało, zakładałam,
+        że odnoszę porażkę. Dzisiaj wiem, że moim powołaniem nie jest jedna rzecz,
+        lecz odkrywanie i realizacja w wielu.
+      </p>
       <Image
-        class="interactive-flower w-48 rotate-[var(--flower-swing,0deg)] -translate-x-15 -translate-y-15"
-        src={FlowerSaturated}
-        alt="Flower"
-        role="presentation"
+        src={QuoteCzujeSieNajbardziej}
+        alt="Czuję się najbardziej żywa kiedy ciągle próbuję"
+        class="self-end w-80 mt-6"
       />
     </div>
-  </div>
+  </section>
+  <section id="kontakt" class="flex justify-center pb-48">
+    <div>
+      <Image src={PhotoGrid} alt="A photo grid" class="w-[32rem]" />
+    </div>
+    <div class="flex flex-col justify-center">
+      <Image src={QuoteBadzmyWKontakcie} alt="Bądźmy w kontakcie" />
+    </div>
+  </section>
 </main>
 <script>
   function encroach(
