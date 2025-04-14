@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import FlowerSaturated from '../assets/flower-saturated.png';
+
+type Props = {
+  class: string;
+};
+
+const { class: className } = Astro.props;
+---
+
+<Image
+  class:list={[
+    'interactive-flower rotate-[var(--flower-swing,0deg)]',
+    className,
+  ]}
+  src={FlowerSaturated}
+  alt="Flower"
+  role="presentation"
+/>
+
+<script>
+  import { init } from './flower-behavior.ts';
+
+  init();
+</script>

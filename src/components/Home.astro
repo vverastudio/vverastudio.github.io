@@ -1,57 +1,81 @@
 ---
 import { Image } from 'astro:assets';
-import FlowerSaturated from '../assets/flower-saturated.png';
+import OMojejDrodze from '../assets/o-mojej-drodze.png';
 import TitleWeronikaKubala from '../assets/title-weronika-kubala.svg';
 import TitleOMojejDrodze from '../assets/title-o-mojej-drodze.svg';
 import QuoteJestemStworzonaZebyTworzyc from '../assets/quote-jestem-stworzona-zeby-tworzyc.svg';
 import QuoteCzujeSieNajbardziej from '../assets/quote-czuje-sie-najbardziej-zywa-kiedy-ciagle-probuje.svg';
 import QuoteBadzmyWKontakcie from '../assets/quote-badzmy-w-kontakcie.svg';
 import PhotoGrid from '../assets/photo-grid.png';
+import MiniWera1 from '../assets/mini-wera-1.png';
+import MiniWera2 from '../assets/mini-wera-2.png';
+import MiniWera3 from '../assets/mini-wera-3.png';
+import Flower from './Flower.astro';
 ---
 
 <main class="">
   <!-- <p class="font-msmadi text-xl mb-10">trwa proces twórczy</p> -->
-  <section id="o-mnie" class="flex flex-col justify-center items-center">
+  <section id="o-mnie" class="flex justify-center items-start pt-48">
     <h1 class="sr-only">O mnie</h1>
-    <Image src={TitleWeronikaKubala} alt="Weronika Kubala" class="mt-48" />
-    <p class="font-poppins font-light max-w-56 ml-24 mt-20 mb-12">
-      Całe dotychczasowe życie spędziłam na odkrywaniu jednej prawdy o sobie:
-    </p>
-    <Image
-      src={QuoteJestemStworzonaZebyTworzyc}
-      alt="Jestem stworzona żeby tworzyć"
-      class="ml-28"
-    />
-    <div class="my-12">
+    <div class="relative w-96 h-[36rem]">
+      <Flower class="absolute top-28 left-40 w-60 -scale-x-100" />
+      <Flower class="absolute top-0 left-0 w-60" />
       <Image
-        class="interactive-flower w-48 rotate-[var(--flower-swing,0deg)] translate-x-12"
-        src={FlowerSaturated}
-        alt="Flower"
+        src={MiniWera2}
+        class="absolute top-0 left-2 w-28"
+        alt="A picture of Weronika Kubala"
         role="presentation"
       />
-      <div class="flex">
-        <Image
-          class="interactive-flower w-48 rotate-[var(--flower-swing,0deg)] -scale-x-100 -translate-y-10"
-          src={FlowerSaturated}
-          alt="Flower"
-          role="presentation"
-        />
-        <Image
-          class="interactive-flower w-48 rotate-[var(--flower-swing,0deg)] -translate-x-15 -translate-y-15"
-          src={FlowerSaturated}
-          alt="Flower"
-          role="presentation"
-        />
-      </div>
+      <Image
+        src={MiniWera3}
+        class="absolute top-48 left-14 w-72"
+        alt="A picture of Weronika Kubala"
+        role="presentation"
+      />
+    </div>
+    <div>
+      <Image
+        src={TitleWeronikaKubala}
+        alt="Weronika Kubala"
+        class="w-[30rem]"
+      />
+      <p class="font-poppins font-light max-w-56 ml-24 mt-20 mb-12">
+        Całe dotychczasowe życie spędziłam na odkrywaniu jednej prawdy o sobie:
+      </p>
+      <Image
+        src={QuoteJestemStworzonaZebyTworzyc}
+        alt="Jestem stworzona żeby tworzyć"
+        class="ml-28 w-96"
+      />
+    </div>
+    <div class="relative w-[20rem] h-[36rem]">
+      <Image
+        src={MiniWera1}
+        class="absolute bottom-0 left-14 w-[16rem]"
+        alt="A picture of Weronika Kubala"
+        role="presentation"
+      />
+      <Flower class="absolute bottom-4 right-4 w-[13rem] -scale-x-100" />
     </div>
   </section>
-  <section class="flex justify-center">
-    <div>
-      <h1 class="sr-only">O mojej drodze</h1>
-
+  <section
+    class="pt-24 w-fit w-content mx-auto grid grid-cols-[auto,auto] grid-rows-[auto,1fr] gap-x-20"
+  >
+    <h1 class="sr-only">O mojej drodze</h1>
+    <div class="col-start-1 col-span-1 row-start-1 row-span-1 flex justify-end">
       <Image src={TitleOMojejDrodze} alt="O mojej drodze" />
     </div>
-    <div class="ml-20 p-6 flex flex-col">
+    <div
+      class="relative pl-64 pt-6 pb-12 col-start-1 col-span-1 row-start-2 row-span-1"
+    >
+      <Image
+        src={OMojejDrodze}
+        alt="A picture of Weronika Kubala"
+        class="w-80"
+      />
+      <Flower class="absolute left-10 bottom-0 w-64" />
+    </div>
+    <div class="col-start-2 col-span-1 row-start-1 row-end-3 p-6 flex flex-col">
       <p class="w-[19rem] font-poppins font-light mr-16">
         Mam 24 lata.
         <br />
@@ -80,76 +104,3 @@ import PhotoGrid from '../assets/photo-grid.png';
     </div>
   </section>
 </main>
-<script>
-  function encroach(
-    from: number,
-    to: number,
-    factorPerSecond: number,
-    deltaSeconds: number
-  ): number {
-    const diff = to - from;
-    const factor = factorPerSecond ** deltaSeconds;
-    return from + diff * (1 - factor);
-  }
-
-  function createInteractiveFlower(elem: HTMLImageElement) {
-    const MAX_ABS_ANG_VEL = 200;
-    let angVelocity = -50;
-    let angle = 0;
-    let lastTime = Date.now();
-    let lastMousePos: readonly [number, number] | undefined;
-
-    function onMouseMove(event: MouseEvent) {
-      const pos = [event.pageX, event.pageY] as const;
-      if (lastMousePos === undefined) {
-        lastMousePos = pos;
-        return;
-      }
-
-      const diff = [pos[0] - lastMousePos[0], pos[1] - lastMousePos[1]];
-      // const diffMag = Math.sqrt(diff[0] ** 2 + diff[1] ** 2);
-      // console.log(diffMag);
-      angVelocity -= diff[0] * 0.5;
-
-      if (angVelocity > MAX_ABS_ANG_VEL) {
-        angVelocity = MAX_ABS_ANG_VEL;
-      }
-      if (angVelocity < -MAX_ABS_ANG_VEL) {
-        angVelocity = -MAX_ABS_ANG_VEL;
-      }
-      lastMousePos = pos;
-    }
-
-    function onBlur() {
-      lastMousePos = undefined;
-    }
-
-    elem.addEventListener('mousemove', onMouseMove);
-    elem.addEventListener('blur', onBlur);
-
-    function frame() {
-      const now = Date.now();
-      const dt = (now - lastTime) * 0.001;
-      lastTime = now;
-
-      // Applying gravity
-      angVelocity += -angle * 0.5;
-      // Damping
-      angVelocity = encroach(angVelocity, 0, 0.1, dt);
-
-      // Applying velocity
-      angle += angVelocity * dt;
-
-      elem.style.setProperty('--flower-swing', `${angle}deg`);
-      requestAnimationFrame(frame);
-    }
-
-    frame();
-  }
-
-  for (const elem of document.querySelectorAll<HTMLImageElement>(
-    '.interactive-flower'
-  )) {
-    createInteractiveFlower(elem);
-  }
-</script>
