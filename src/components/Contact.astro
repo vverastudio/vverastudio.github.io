@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import PhotoGrid from '../assets/photo-grid.jpg';
+import MailIcon from '../assets/mail-icon.svg';
+import QuoteBadzmyWKontakcie from '../assets/quote-badzmy-w-kontakcie.svg';
+import Flower from './Flower.astro';
+---
+
+<section
+  id="kontakt"
+  class="mx-auto mt-20 grid grid-cols-1 grid-rows-[auto,auto,auto] lg:grid-cols-[auto,auto] lg:grid-rows-[auto,auto] pb-48 w-fit"
+>
+  <div class="col-start-1 lg:row-start-1 lg:row-span-2 relative p-20 w-fit">
+    <Image
+      src={PhotoGrid}
+      alt="A photo grid"
+      class="w-[24rem] border border-black"
+    />
+    <Flower class="absolute bottom-10 left-10 w-[7rem]" />
+    <Flower class="absolute top-12 right-6 w-[7rem] -scale-x-100" />
+    <Flower class="absolute top-4 right-28 w-[7rem]" />
+  </div>
+  <div
+    class="row-start-1 lg:col-start-2 flex justify-center items-center mt-20 mx-12"
+  >
+    <Image
+      src={QuoteBadzmyWKontakcie}
+      alt="Bądźmy w kontakcie"
+      class="w-[22rem]"
+    />
+  </div>
+  <div
+    class="lg:col-start-2 lg:row-start-2 flex flex-col justify-center items-stretch text-lg lg:text-xl gap-24 mx-8"
+  >
+    <a
+      href="mailto:wkubala.socials@gmail.com"
+      class="flex justify-between items-center font-poppins font-light"
+    >
+      <Image
+        src={MailIcon}
+        alt="mail icon"
+        role="presentation"
+        class="w-16 lg:w-24"
+      />
+      wkubala.socials@gmail.com
+    </a>
+    <div class="flex justify-between items-center mb-20">
+      <ul class="font-poppins font-medium text-[#665f20]">
+        <li>
+          <a
+            href="https://www.instagram.com/vverakubala/"
+            target="_blank"
+            rel="noreferrer">instagram</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.tiktok.com/@vverakubala"
+            target="_blank"
+            rel="noreferrer">tik tok</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/@vverakubala"
+            target="_blank"
+            rel="noreferrer">youtube</a
+          >
+        </li>
+      </ul>
+      <p class="font-poppins font-light text-black">vverakubala</p>
+    </div>
+  </div>
+</section>
