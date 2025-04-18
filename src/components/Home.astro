@@ -5,16 +5,24 @@ import TitleWeronikaKubala from '../assets/title-weronika-kubala.svg';
 import TitleOMojejDrodze from '../assets/title-o-mojej-drodze.svg';
 import TitleOlejkiDoUstYourKayaProduktWUzyciu from '../assets/title-olejki-do-ust-your-kaya-produkt-w-uzyciu.svg';
 import MediaOlejkiDoUstYourKayaProduktWUzyciu from '../assets/media-olejki-do-ust-your-kaya-produkt-w-uzyciu.png';
+import TitleZestawDoStylizacjiWlosow from '../assets/title-zestaw-do-stylizacji-wlosow-got2be-produkt-w-uzyciu.svg';
+import MediaZestawDoStylizacjiWlosow from '../assets/media-zestaw-do-stylizacji-wlosow-got2be-produkt-w-uzyciu.mov';
+import TitleOlejkiDoUstYourKayaEverydayLook from '../assets/title-olejki-do-ust-your-kaya-everyday-look.svg';
+import MediaOlejkiDoUstYourKayaEverydayLook from '../assets/media-olejki-do-ust-your-kaya-everyday-look.mov';
+import TitleZelDoPraniaCoccolino from '../assets/title-zel-do-prania-coccolino.svg';
 import QuoteJestemStworzonaZebyTworzyc from '../assets/quote-jestem-stworzona-zeby-tworzyc.svg';
 import QuoteCzujeSieNajbardziej from '../assets/quote-czuje-sie-najbardziej-zywa-kiedy-ciagle-probuje.svg';
 import MiniWera1 from '../assets/mini-wera-1.png';
 import MiniWera2 from '../assets/mini-wera-2.png';
 import MiniWera3 from '../assets/mini-wera-3.png';
+import DRES from '../assets/dres.mp4';
+import NavBar from './NavBar.astro';
 import Flower from './Flower.astro';
 import Contact from './Contact.astro';
 import SimpleMediaAndDescription from './SimpleMediaAndDescription.astro';
 ---
 
+<NavBar />
 <main class="">
   <!-- <p class="font-msmadi text-xl mb-10">trwa proces twórczy</p> -->
   <section id="o-mnie">
@@ -173,5 +181,192 @@ import SimpleMediaAndDescription from './SimpleMediaAndDescription.astro';
       </p>
     </div>
   </SimpleMediaAndDescription>
+  <SimpleMediaAndDescription name="TEMPORARY">
+    <Image
+      slot="title"
+      src={TitleOlejkiDoUstYourKayaProduktWUzyciu}
+      alt="TEMPORARY"
+      class="w-[28rem]"
+    />
+    <video controls slot="media" src={DRES} class="w-[18rem]"></video>
+    <div slot="description">
+      <p>
+        Typ contentu: video Reels z voiceoverem Produkt: zestaw dresowy Noszę
+        Sztukę Rola: koncepcja, stylizacja, nagranie, voiceover, montaż
+        Kategoria: UGC – fashion / produkt w użyciu / body positive Cel:
+        pokazanie dopasowania zestawu do midsize sylwetki + przekaz wspierający
+        akceptację ciała i wygodę noszenia
+      </p><p class="mt-8">
+        W tej rolce chciałam pokazać, że moda może być wygodna, dopasowana i
+        wspierająca – pewność siebie nie nosi rozmiaru:) Film nagrałam z
+        voiceoverem o ciałopozytywności i swobodnym wyrażaniu siebie.
+      </p>
+    </div>
+  </SimpleMediaAndDescription>
+  <SimpleMediaAndDescription
+    name="Zestaw do stylizacji włosów Got2be UGC Beauty / Produkt w użyciu"
+  >
+    <Image
+      slot="title"
+      src={TitleZestawDoStylizacjiWlosow}
+      alt="Zestaw do stylizacji włosów Got2be UGC Beauty / Produkt w użyciu"
+      class="w-[28rem]"
+    />
+    <video
+      controls
+      slot="media"
+      src={MediaZestawDoStylizacjiWlosow}
+      class="w-[18rem]"></video>
+    <div slot="description">
+      <p>
+        TyTyp contentu: Reels – pokaz działania produktów (beauty
+        tutorial/styling) Produkt: klej stylizujący + lakier do włosów Rola:
+        koncepcja, nagranie, stylizacja włosów, montaż, kreatywna oprawa
+        (grafika + elementy wiosenne) Kategoria: UGC – beauty/produkt w
+        użyciu/włosy Cel: prezentacja działania dwóch produktów w praktyce
+      </p><p class="mt-8">
+        Ten Reels to stylizacyjna opowieść o dobrym dniu dla włosów – bez
+        względu na kaprysy pogody. Pokazałam dwa sposoby użycia zestawu: krem
+        stylizacyjny w sleek bunie i lakier utrwalający naturalne loki. Całość
+        uzupełniłam kwiatowym akcentem – forsycja podbiła żółtą grafikę
+        produktów i nadała filmowi świeży, wiosenny vibe.
+      </p>
+    </div>
+  </SimpleMediaAndDescription>
+  <SimpleMediaAndDescription name="Olejki do ust Your Kaya">
+    <Image
+      slot="title"
+      src={TitleOlejkiDoUstYourKayaEverydayLook}
+      alt="UGC Beauty / Everyday Look"
+    />
+    <video
+      controls
+      slot="media"
+      src={MediaOlejkiDoUstYourKayaEverydayLook}
+      class="w-[18rem]"></video>
+    <div slot="description">
+      <p>
+        Typ contentu: Reels – beauty – produkt w użyciu Produkt: 3 kolory
+        olejków do ust marki Your Kaya Rola: koncepcja, stylizacje, nagranie,
+        montaż, prezentacja produktu Kategoria: UGC – beauty / produkt w użyciu
+        / stylizacje Cel: pokazanie, że każdy kolor olejku pasuje do innego
+        nastroju i looku – produkt na co dzień, bez kompromisów
+      </p><p class="mt-8">
+        W tej rolce pokazałam 3 odcienie olejków Your Kaya w akcji – każdy w
+        innym klimacie. Celem było uchwycenie ich naturalnego efektu, łatwości
+        aplikacji i tego, jak świetnie wpisują się w codzienne rytuały. Hasło
+        „Your Kaya – for everyday” było kluczem: każdy kolor to inny nastrój,
+        inny outfit, ale zawsze ten sam komfort i subtelne glow.
+      </p>
+    </div>
+  </SimpleMediaAndDescription>
+  <!-- <SimpleMediaAndDescription name="Żel do prania Coccolino UGC Home/ TikTok">
+    <Image
+      slot="title"
+      src={TitleZelDoPraniaCoccolino}
+      alt="Żel do prania Coccolino UGC Home/ TikTok"
+    />
+    <div slot="media">
+      <blockquote
+        class="tiktok-embed"
+        cite="https://www.tiktok.com/@vverakubala/video/7488751444179291415"
+        data-video-id="7488751444179291415"
+        style="max-width: 605px;min-width: 325px;"
+      >
+        <section>
+          <a
+            target="_blank"
+            title="@vverakubala"
+            href="https://www.tiktok.com/@vverakubala?refer=embed"
+            >@vverakubala</a
+          > Znacie to uczucie, gdy śpieszycie się na tramwaj, a pralka od pół godziny
+          pokazuje, że potrzebuje jeszcze minuty?🥲 Znalazłam rozwiązanie! Coccolino
+          Wonder Wash radzi sobie świetnie nawet w 15-minutowych cyklach (trust me
+          with this one)! No i uwieeelbiam ten zapach💛 <a
+            title="coccolino"
+            target="_blank"
+            href="https://www.tiktok.com/tag/coccolino?refer=embed"
+            >#Coccolino</a
+          >
+          <a
+            title="coccolinowonderwash"
+            target="_blank"
+            href="https://www.tiktok.com/tag/coccolinowonderwash?refer=embed"
+            >#CoccolinoWonderWash</a
+          >
+          <a
+            title="tylko15minut"
+            target="_blank"
+            href="https://www.tiktok.com/tag/tylko15minut?refer=embed"
+            >#tylko15minut</a
+          >
+          <a
+            title="cozazapach"
+            target="_blank"
+            href="https://www.tiktok.com/tag/cozazapach?refer=embed"
+            >#CoZaZapach</a
+          >
+          <a
+            title="szybkiepranie"
+            target="_blank"
+            href="https://www.tiktok.com/tag/szybkiepranie?refer=embed"
+            >#SzybkiePranie</a
+          >
+          <a
+            title="współpracareklamowa"
+            target="_blank"
+            href="https://www.tiktok.com/tag/wsp%C3%B3%C5%82pracareklamowa?refer=embed"
+            >#współpracareklamowa</a
+          >
+          <a
+            target="_blank"
+            title="♬ dźwięk oryginalny - weronika kubala"
+            href="https://www.tiktok.com/music/dźwięk-oryginalny-7488751430675401494?refer=embed"
+            >♬ dźwięk oryginalny - weronika kubala</a
+          >
+        </section>
+      </blockquote>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+    </div>
+    <div slot="description">
+      <p>
+        Typ contentu: TikTok – kampania produktowa + storytelling
+        <br />
+        Produkt: żel do prania Coccolino
+        <br />
+        Rola: nagranie, montaż, prezentacja produktu
+        <br />
+        Kategoria: UGC – home care / produkt w użyciu / codzienność
+        <br />
+        Cel: pokazanie efektywności żelu w krótkich cyklach prania, jak produkt oszczędza
+        czas w codziennym życiu
+      </p>
+      <p class="mt-8">
+        W tym TikToku pokazałam, jak żel do prania Coccolino pomaga mi w
+        codziennej rutynie – zwłaszcza kiedy czas jest ograniczony. W trakcie
+        szykowania się na uczelnię, uruchamiam pralkę na szybki cykl, dzięki
+        czemu moje pranie zdąży się wyprać, zanim wyjdę z domu. Wszystko w
+        dynamicznym tempie, aby oddać energię dnia codziennego.
+      </p>
+    </div>
+  </SimpleMediaAndDescription> -->
+
   <Contact />
 </main>
+
+<style>
+  :global(.tiktok-embed) {
+    margin: 0 !important;
+  }
+
+  :global(.tiktok-embed > a) {
+    display: flex !important;
+    align-items: center;
+    padding: 0.5rem !important;
+
+    span {
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+</style>
