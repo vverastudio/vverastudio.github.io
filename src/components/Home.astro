@@ -158,29 +158,40 @@ import PhoneInstagram from './PhoneInstagram.astro';
       />
     </div>
   </section>
-  <section class="pt-32 grid grid-cols-[auto] grid-rows-[auto_auto_1fr]">
+  <section
+    class="pt-32 grid grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
+  >
     <Image
       src={QuoteSocialMedia}
       alt="social media"
-      class="mx-auto w-64 sm:w-80"
+      class="mx-auto w-64 pb-8 sm:w-80 lg:col-start-1"
     />
-    <div class="w-fit relative flex items-end gap-8 pb-16 pr-14">
+    <div
+      class="mx-auto w-fit relative flex items-end gap-4 lg:gap-8 pb-8 lg:pb-16 pr-7 lg:pr-14 lg:col-start-2 lg:row-span-2"
+    >
       <Image
         src={InstagramScreenshot}
         alt="Instagram screenshot"
-        class="w-72 border border-black"
+        class="w-[9rem] lg:w-[18rem] border border-black"
       />
-      <div class="bg-[#665f20] w-[14rem] h-[21rem] border border-black"></div>
+      <div
+        class="bg-[#665f20] w-[7rem] h-[10.5rem] lg:w-[14rem] lg:h-[21rem] border border-black"
+      >
+      </div>
       <Image
         src={HandWithFlower}
         alt="Bukiet kwiatów"
-        class="absolute right-0 bottom-0 w-96"
+        class="absolute right-0 bottom-0 w-[12rem] lg:w-[24rem]"
       />
-      <div class="absolute top-0 right-32">
+      <div
+        class="absolute top-0 right-16 lg:top-[unset] lg:bottom-0 lg:right-[unset] lg:-left-48"
+      >
         <PhoneInstagram />
       </div>
     </div>
-    <p class="font-poppins font-light">
+    <p
+      class="mx-auto p-6 pt-8 max-w-[23rem] font-poppins font-light lg:col-start-1 lg:row-start-2"
+    >
       W 2024 roku postanowiłam spełnić swoje marzenie o prowadzeniu mediów
       społecznościowych.
       <br />
