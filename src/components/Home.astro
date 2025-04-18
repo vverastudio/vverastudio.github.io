@@ -12,6 +12,9 @@ import MediaOlejkiDoUstYourKayaEverydayLook from '../assets/media-olejki-do-ust-
 import TitleZelDoPraniaCoccolino from '../assets/title-zel-do-prania-coccolino.svg';
 import QuoteJestemStworzonaZebyTworzyc from '../assets/quote-jestem-stworzona-zeby-tworzyc.svg';
 import QuoteCzujeSieNajbardziej from '../assets/quote-czuje-sie-najbardziej-zywa-kiedy-ciagle-probuje.svg';
+import QuoteSocialMedia from '../assets/quote-social-media.svg';
+import InstagramScreenshot from '../assets/instagram-screenshot.jpg';
+import HandWithFlower from '../assets/hand-with-flower.png';
 import MiniWera1 from '../assets/mini-wera-1.png';
 import MiniWera2 from '../assets/mini-wera-2.png';
 import MiniWera3 from '../assets/mini-wera-3.png';
@@ -20,6 +23,7 @@ import NavBar from './NavBar.astro';
 import Flower from './Flower.astro';
 import Contact from './Contact.astro';
 import SimpleMediaAndDescription from './SimpleMediaAndDescription.astro';
+import PhoneInstagram from './PhoneInstagram.astro';
 ---
 
 <NavBar />
@@ -118,7 +122,11 @@ import SimpleMediaAndDescription from './SimpleMediaAndDescription.astro';
   >
     <h1 class="sr-only">O mojej drodze</h1>
     <div class="lg:col-start-1 lg:row-start-1 flex justify-end">
-      <Image src={TitleOMojejDrodze} alt="O mojej drodze" />
+      <Image
+        class="mx-auto w-[16rem] sm:w-[30rem]"
+        src={TitleOMojejDrodze}
+        alt="O mojej drodze"
+      />
     </div>
     <div class="pt-6 pb-12 lg:col-start-1 lg:row-start-2 place-content-center">
       <div class="relative pl-32 lg:pl-36 w-fit">
@@ -149,6 +157,39 @@ import SimpleMediaAndDescription from './SimpleMediaAndDescription.astro';
         class="self-end w-80 mt-6"
       />
     </div>
+  </section>
+  <section class="pt-32 grid grid-cols-[auto] grid-rows-[auto_auto_1fr]">
+    <Image
+      src={QuoteSocialMedia}
+      alt="social media"
+      class="mx-auto w-64 sm:w-80"
+    />
+    <div class="w-fit relative flex items-end gap-8 pb-16 pr-14">
+      <Image
+        src={InstagramScreenshot}
+        alt="Instagram screenshot"
+        class="w-72 border border-black"
+      />
+      <div class="bg-[#665f20] w-[14rem] h-[21rem] border border-black"></div>
+      <Image
+        src={HandWithFlower}
+        alt="Bukiet kwiatów"
+        class="absolute right-0 bottom-0 w-96"
+      />
+      <div class="absolute top-0 right-32">
+        <PhoneInstagram />
+      </div>
+    </div>
+    <p class="font-poppins font-light">
+      W 2024 roku postanowiłam spełnić swoje marzenie o prowadzeniu mediów
+      społecznościowych.
+      <br />
+      Równolegle studiuję, dlatego działalność w internecie stała się dodatkiem do
+      życia.
+      <br />
+      Dziś wiem, że nigdy nie czułam podobnej satysfakcji, niż ta powiązana z publikacją
+      tworzonych treści i budowaniem własnej społeczności.
+    </p>
   </section>
   <SimpleMediaAndDescription
     name="Olejki do ust Your Kaya UGC Beauty / Produkt w użyciu"

@@ -1,0 +1,35 @@
+---
+import PhoneInstagramBg from '../assets/phone-instagram-bg.png';
+import PhotoGrid from '../assets/photo-grid.jpg';
+import { Image } from 'astro:assets';
+---
+
+<div class="relative w-[256px] h-[256px]">
+  <Image
+    class="phone-instagram-content absolute inset-0 z-10 w-[256px] h-[256px]"
+    src={PhotoGrid}
+    alt="TEMP"
+    role="presentation"
+  />
+  <svg width="0" height="0">
+    <defs>
+      <clipPath id="phone-instagram-clippath" clipPathUnits="objectBoundingBox">
+        <path
+          d="m 0.69824219,0.17264697 0.24609375,0.12655274 c 0.0193408,0.009741 0.0275049,0.0235342 0.0234375,0.0377144 -0.00271,0.009446 -0.011626,0.0187915 -0.0234375,0.0282192 0,0 -0.51538086,0.40635107 -0.54150391,0.4227085 -0.026123,0.0163574 -0.064209,0.0193994 -0.0935059,0.003872 -0.0292968,-0.0155273 -0.252269,-0.14181147 -0.252269,-0.14181147 -0.03606104,-0.0209961 -0.02702778,-0.0461426 -0.0076685,-0.0622559 0,0 0.52800391,-0.39534277 0.55241797,-0.4114165 0.0244141,-0.0160737 0.0564648,-0.0220283 0.0964356,-0.003583 z"
+        ></path>
+      </clipPath>
+    </defs>
+  </svg>
+  <Image
+    class="absolute inset-0"
+    src={PhoneInstagramBg}
+    alt="Phone mockup"
+    role="presentation"
+  />
+</div>
+
+<style>
+  .phone-instagram-content {
+    clip-path: url(#phone-instagram-clippath);
+  }
+</style>
