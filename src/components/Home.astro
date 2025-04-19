@@ -13,6 +13,7 @@ import MediaOlejkiDoUstYourKayaEverydayLook from '../assets/media-olejki-do-ust-
 import TitleZelDoPraniaCoccolino from '../assets/title-zel-do-prania-coccolino.svg';
 import TitleUGC from '../assets/title-ugc.svg';
 import TitleStylizacjeZGumkamiFrancaUGCFashionLifestyle from '../assets/title-stylizacje-z-gumkami-franca-lifestyle.svg';
+import TitleZestawNoszeSztukeUGCFashionTryOnHaul from '../assets/title-zestaw-nosze-sztuke-ugc-fashion-try-on-haul.svg';
 import QuoteJestemStworzonaZebyTworzyc from '../assets/quote-jestem-stworzona-zeby-tworzyc.svg';
 import QuoteCzujeSieNajbardziej from '../assets/quote-czuje-sie-najbardziej-zywa-kiedy-ciagle-probuje.svg';
 import QuoteSocialMedia from '../assets/quote-social-media.svg';
@@ -32,6 +33,7 @@ import SimpleMediaAndDescription from './SimpleMediaAndDescription.astro';
 import PhoneInstagram from './PhoneInstagram.astro';
 import PortfolioSection from './PortfolioSection.astro';
 import PrzesuwaneKafelki from './PrzesuwaneKafelki.astro';
+import YourKayaGrid from './YourKayaGrid.astro';
 ---
 
 <NavBar />
@@ -334,15 +336,18 @@ import PrzesuwaneKafelki from './PrzesuwaneKafelki.astro';
       </p>
     </div>
   </SimpleMediaAndDescription>
-  <SimpleMediaAndDescription name="TEMPORARY">
+  <YourKayaGrid />
+  <SimpleMediaAndDescription
+    name="Zestaw nosze sztuke UGC Fashion / try on haul"
+  >
     <Image
       slot="title"
-      src={TitleOlejkiDoUstYourKayaProduktWUzyciu}
-      alt="TEMPORARY"
-      class="w-[28rem]"
+      src={TitleZestawNoszeSztukeUGCFashionTryOnHaul}
+      alt="Zestaw nosze sztuke UGC Fashion / try on haul"
+      class="w-[14rem]"
     />
     <video controls slot="media" src={DRES} class="w-[18rem]"></video>
-    <div slot="description" class="max-w-[23rem]">
+    <div slot="description" class="max-w-[25rem]">
       <p>
         Typ contentu: video Reels z voiceoverem<br />
         Produkt: zestaw dresowy Noszę Sztukę<br />
@@ -352,8 +357,8 @@ import PrzesuwaneKafelki from './PrzesuwaneKafelki.astro';
         akceptację ciała i wygodę noszenia
       </p><p class="mt-8">
         W tej rolce chciałam pokazać, że moda może być wygodna, dopasowana i
-        wspierająca – pewność siebie nie nosi rozmiaru:) Film nagrałam z
-        voiceoverem o ciałopozytywności i swobodnym wyrażaniu siebie.
+        wspierająca – pewność siebie nie nosi rozmiaru:)<br />
+        Film nagrałam z voiceoverem o ciałopozytywności i swobodnym wyrażaniu siebie.
       </p>
     </div>
   </SimpleMediaAndDescription>
