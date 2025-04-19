@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import TitlePortfolio from '../assets/title-portfolio.svg';
+import IdPhotoGrey from '../assets/id-photo-grey.png';
+import IdPhotoDark from '../assets/id-photo-dark.png';
+import IdPhotoLight from '../assets/id-photo-light.png';
+import Flower from './Flower.astro';
+---
+
+<section id="portfolio" class="relative mx-auto py-32 w-fit">
+  <h1 class="sr-only">Portfolio</h1>
+  <Image src={TitlePortfolio} alt="Portfolio" class="mx-auto w-64 lg:w-80" />
+  <div
+    class="flex flex-wrap justify-center gap-8 lg:gap-20 mt-10 max-w-[24rem] lg:max-w-none"
+  >
+    <Image
+      src={IdPhotoGrey}
+      alt="Zdjęcie dowodu osobistego (1)"
+      class="w-32 lg:w-58 border border-black"
+    />
+    <Image
+      src={IdPhotoDark}
+      alt="Zdjęcie dowodu osobistego (2)"
+      class="w-32 lg:w-58 border border-black"
+    />
+    <Image
+      src={IdPhotoLight}
+      alt="Zdjęcie dowodu osobistego (3)"
+      class="w-32 lg:w-58 border border-black"
+    />
+  </div>
+  <Flower
+    class="absolute top-44 -right-12 w-32 lg:top-40 lg:-right-28 lg:w-48 -scale-x-100"
+  />
+</section>

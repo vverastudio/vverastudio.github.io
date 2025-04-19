@@ -11,11 +11,13 @@ import MediaZestawDoStylizacjiWlosow from '../assets/media-zestaw-do-stylizacji-
 import TitleOlejkiDoUstYourKayaEverydayLook from '../assets/title-olejki-do-ust-your-kaya-everyday-look.svg';
 import MediaOlejkiDoUstYourKayaEverydayLook from '../assets/media-olejki-do-ust-your-kaya-everyday-look.mov';
 import TitleZelDoPraniaCoccolino from '../assets/title-zel-do-prania-coccolino.svg';
+import TitleUGC from '../assets/title-ugc.svg';
 import QuoteJestemStworzonaZebyTworzyc from '../assets/quote-jestem-stworzona-zeby-tworzyc.svg';
 import QuoteCzujeSieNajbardziej from '../assets/quote-czuje-sie-najbardziej-zywa-kiedy-ciagle-probuje.svg';
 import QuoteSocialMedia from '../assets/quote-social-media.svg';
 import QuoteSlowoWieleZnaczy from '../assets/quote-slowo-wiele-znaczy.svg';
 import InstagramScreenshot from '../assets/instagram-screenshot.jpg';
+import HandWithBouquet from '../assets/hand-with-bouquet.png';
 import HandWithFlower from '../assets/hand-with-flower.png';
 import MiniWera1 from '../assets/mini-wera-1.png';
 import MiniWera2 from '../assets/mini-wera-2.png';
@@ -26,6 +28,7 @@ import Flower from './Flower.astro';
 import Contact from './Contact.astro';
 import SimpleMediaAndDescription from './SimpleMediaAndDescription.astro';
 import PhoneInstagram from './PhoneInstagram.astro';
+import PortfolioSection from './PortfolioSection.astro';
 ---
 
 <NavBar />
@@ -182,7 +185,7 @@ import PhoneInstagram from './PhoneInstagram.astro';
       >
       </div>
       <Image
-        src={HandWithFlower}
+        src={HandWithBouquet}
         alt="Bukiet kwiatów"
         class="absolute right-0 bottom-0 w-[12rem] lg:w-[24rem]"
       />
@@ -235,6 +238,36 @@ import PhoneInstagram from './PhoneInstagram.astro';
       />
     </p>
   </section>
+  <section
+    id="ugc"
+    class="mx-auto pt-32 w-fit grid lg:gap-x-36 grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
+  >
+    <h1 class="sr-only">UGC</h1>
+    <Image
+      src={TitleUGC}
+      alt="UGC"
+      class="mx-auto w-32 pb-8 sm:w-48 lg:col-start-2"
+    />
+    <div
+      class="mx-auto w-fit relative lg:col-start-1 lg:row-span-2 lg:row-start-1"
+    >
+      <Image
+        src={HandWithFlower}
+        alt="Kwiat w mojej dłoni"
+        class="w-72 border border-black"
+      />
+    </div>
+    <p
+      class="lg:col-start-2 lg:row-start-2 mx-auto flex flex-col items-end justify-end px-6 pt-8 max-w-[20rem] font-poppins font-light"
+    >
+      Po roku praktyki i wielu kursach tematycznych, jestem gotowa, by przenieść
+      swoje działania na wyższy, profesjonalny poziom.
+      <br />
+      Tworzę estetyczne, autentyczne treści wideo dla marek z branży lifestyle, beauty
+      i home decor.
+    </p>
+  </section>
+  <PortfolioSection />
   <SimpleMediaAndDescription
     name="Olejki do ust Your Kaya UGC Beauty / Produkt w użyciu"
   >
