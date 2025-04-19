@@ -14,6 +14,12 @@ import TitleZelDoPraniaCoccolino from '../assets/title-zel-do-prania-coccolino.s
 import TitleUGC from '../assets/title-ugc.svg';
 import TitleStylizacjeZGumkamiFrancaUGCFashionLifestyle from '../assets/title-stylizacje-z-gumkami-franca-lifestyle.svg';
 import TitleZestawNoszeSztukeUGCFashionTryOnHaul from '../assets/title-zestaw-nosze-sztuke-ugc-fashion-try-on-haul.svg';
+import TitleLampkaNocnaWestwingUGCHomeDecorStorytelling from '../assets/title-lampka-nocna-westwing-storyteling.svg';
+import MediaLampkaNocnaWestwingUGCHomeDecorStorytelling from '../assets/media-lampka-nocna-westwing-storyteling.mp4';
+import TitleUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover from '../assets/title-unboxing-gumek-franca-voiceover.svg';
+import MediaUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover from '../assets/media-unboxing-gumek-franca-voiceover.mp4';
+import TitleWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine from '../assets/title-wieczorna-pielegnacja-z-basic-lab-skincare-routine.svg';
+import MediaWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine from '../assets/media-wieczorna-pielegnacja-z-basic-lab-skincare-routine.png';
 import QuoteJestemStworzonaZebyTworzyc from '../assets/quote-jestem-stworzona-zeby-tworzyc.svg';
 import QuoteCzujeSieNajbardziej from '../assets/quote-czuje-sie-najbardziej-zywa-kiedy-ciagle-probuje.svg';
 import QuoteSocialMedia from '../assets/quote-social-media.svg';
@@ -404,7 +410,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
       controls
       slot="media"
       src={MediaOlejkiDoUstYourKayaEverydayLook}
-      class="w-[18rem]"></video>
+      class="w-[18rem] border border-black"></video>
     <div slot="description" class="max-w-[24.9rem]">
       <p>
         Typ contentu: Reels – beauty – produkt w użyciu<br />
@@ -420,6 +426,110 @@ import YourKayaGrid from './YourKayaGrid.astro';
         aplikacji i tego, jak świetnie wpisują się w codzienne rytuały. Hasło
         „Your Kaya – for everyday” było kluczem: każdy kolor to inny nastrój,
         inny outfit, ale zawsze ten sam komfort i subtelne glow.
+      </p>
+    </div>
+  </SimpleMediaAndDescription>
+  <SimpleMediaAndDescription
+    name="Lampka nocna Westwing UGC Home Decor / Storytelling"
+  >
+    <Image
+      slot="title"
+      src={TitleLampkaNocnaWestwingUGCHomeDecorStorytelling}
+      alt="Lampka nocna Westwing UGC Home Decor / Storytelling"
+    />
+    <video
+      controls
+      slot="media"
+      src={MediaLampkaNocnaWestwingUGCHomeDecorStorytelling}
+      class="w-[18rem] border border-black"></video>
+    <div slot="description" class="max-w-[25rem]">
+      <p>
+        Typ contentu: TikTok – unboxing + stylizacja przestrzeni<br />
+        Produkt: lampka nocna marki Westwing<br />
+        Rola: koncepcja, nagranie, stylizacja wnętrza, montaż (z efektem graficznym)<br
+        />
+        Kategoria: UGC – home decor / produkt w użyciu / slow content<br />
+        Cel: pokazanie produktu w użyciu, z naciskiem na estetykę, klimat i funkcjonalność
+      </p><p class="mt-8">
+        W tym TikToku pokazałam proces od pomysłu do gotowej aranżacji z lampką
+        Westwing w roli głównej. Na początku – wizualizacja inspiracji, potem
+        rozpakowanie produktu i układanie przestrzeni. Finalny efekt to
+        przytulne, osobiste miejsce do relaksu – zakończone sceną z gazetą i
+        spokojną chwilą. Całość w duchu slow living, z dbałością o detal i
+        spójność kolorów.
+      </p>
+    </div>
+  </SimpleMediaAndDescription>
+  <SimpleMediaAndDescription
+    name="Unboxing gumek Franca UGC Beauty / Produkt w użyciu/ voiceover"
+  >
+    <Image
+      slot="title"
+      src={TitleUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover}
+      alt="Unboxing gumek Franca UGC Beauty / Produkt w użyciu/ voiceover"
+    />
+    <video
+      controls
+      slot="media"
+      src={MediaUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover}
+      class="w-[18rem] border border-black"></video>
+    <div slot="description" class="max-w-[25rem]">
+      <p>
+        Typ contentu: TikTok/Reels – unboxing + voiceover<br />
+        Produkt: gumki do włosów marki Franca<br />
+        Rola: koncepcja, nagranie, stylizacja, voiceover, montaż <br />
+        Kategoria: UGC – beauty / produkt w użyciu <br />
+        Cel: pokazanie gumek Franca w akcji z komentarzem w tle
+      </p><p class="mt-8">
+        W tym unboxingu z voiceoverem pokazuję cały proces – od rozpakowania po
+        stylizację. Opowiadam o tym, jak gumki Franca wpływają na moją pewność
+        siebie i środowisko, bo są stworzone w duchu zero waste z materiałów z
+        drugiej ręki. Całość w naturalnym stylu, by produkt przyciągnął
+        najwięcej uwagi. Dodałam chwytliwy hak na początku i call to action na
+        końcu
+      </p>
+    </div>
+  </SimpleMediaAndDescription>
+  <SimpleMediaAndDescription
+    name="Wieczorna pielęgnacja z Basic Lab UGC YouTube / Skincare Routine"
+  >
+    <Image
+      slot="title"
+      src={TitleWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine}
+      alt="Wieczorna pielęgnacja z Basic Lab UGC YouTube / Skincare Routine"
+      class="lg:!w-[32rem]"
+    />
+    <a
+      slot="media"
+      href="https://youtu.be/FSCpDQ3aZA0?si=ulfS4CnZxBFsOIVN"
+      target="_blank"
+      rel="noreferrer"
+      class="self-center"
+    >
+      <Image
+        src={MediaWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine}
+        alt="Wieczorna pielęgnacja z Basic Lab UGC YouTube / Skincare Routine"
+        class="w-[20rem] lg:w-[36rem] border border-black"
+      />
+    </a>
+    <div slot="description" class="max-w-[28rem]">
+      <p>
+        Typ contentu: YouTube – tutorial / recenzja / skincare routine<br />
+        Produkt: produkty Basic Lab (np. żel do mycia twarzy, tonik, serum itp.)<br
+        />
+        Rola: koncepcja, nagranie, montaż, narracja, prezentacja produktów w użyciu<br
+        />
+        Kategoria: UGC – beauty / pielęgnacja skóry / tutorial<br />
+        Cel: pokazanie wieczornej rutyny pielęgnacyjnej z produktami Basic Lab, podkreślenie
+        ich działania na skórę w praktyce
+      </p><p class="mt-8">
+        W tym filmie pokazuję moją wieczorną pielęgnację skóry z produktami
+        Basic Lab. Całość nagrana w łazience, gdzie używam poszczególnych
+        produktów na żywo. Opowiadam o każdym z nich, dzieląc się moimi
+        doświadczeniami i tym, jak wpływają na moją skórę. Zależało mi na tym,
+        by film był jak najbardziej autentyczny – pokazuję produkty w realnym
+        użyciu, aby widzowie mogli zobaczyć, jak naprawdę działają w codziennej
+        pielęgnacji.
       </p>
     </div>
   </SimpleMediaAndDescription>

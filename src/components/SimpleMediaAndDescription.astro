@@ -15,7 +15,9 @@ const { name } = Astro.props;
   >
     <slot name="title" />
   </div>
-  <div class="media mb-8 lg:mb-0 lg:col-start-1 lg:row-start-1 lg:row-span-2">
+  <div
+    class="media mb-8 lg:mb-0 lg:col-start-1 lg:row-start-1 lg:row-span-2 flex"
+  >
     <slot name="media" />
   </div>
   <div
