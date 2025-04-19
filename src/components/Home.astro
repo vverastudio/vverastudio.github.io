@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import OMojejDrodze from '../assets/o-mojej-drodze.png';
 import TitleWeronikaKubala from '../assets/title-weronika-kubala.svg';
 import TitleOMojejDrodze from '../assets/title-o-mojej-drodze.svg';
+import TitleCopywriting from '../assets/title-copywriting.svg';
 import TitleOlejkiDoUstYourKayaProduktWUzyciu from '../assets/title-olejki-do-ust-your-kaya-produkt-w-uzyciu.svg';
 import MediaOlejkiDoUstYourKayaProduktWUzyciu from '../assets/media-olejki-do-ust-your-kaya-produkt-w-uzyciu.png';
 import TitleZestawDoStylizacjiWlosow from '../assets/title-zestaw-do-stylizacji-wlosow-got2be-produkt-w-uzyciu.svg';
@@ -13,6 +14,7 @@ import TitleZelDoPraniaCoccolino from '../assets/title-zel-do-prania-coccolino.s
 import QuoteJestemStworzonaZebyTworzyc from '../assets/quote-jestem-stworzona-zeby-tworzyc.svg';
 import QuoteCzujeSieNajbardziej from '../assets/quote-czuje-sie-najbardziej-zywa-kiedy-ciagle-probuje.svg';
 import QuoteSocialMedia from '../assets/quote-social-media.svg';
+import QuoteSlowoWieleZnaczy from '../assets/quote-slowo-wiele-znaczy.svg';
 import InstagramScreenshot from '../assets/instagram-screenshot.jpg';
 import HandWithFlower from '../assets/hand-with-flower.png';
 import MiniWera1 from '../assets/mini-wera-1.png';
@@ -159,6 +161,7 @@ import PhoneInstagram from './PhoneInstagram.astro';
     </div>
   </section>
   <section
+    id="social-media"
     class="pt-32 grid grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
   >
     <Image
@@ -200,6 +203,36 @@ import PhoneInstagram from './PhoneInstagram.astro';
       <br />
       Dziś wiem, że nigdy nie czułam podobnej satysfakcji, niż ta powiązana z publikacją
       tworzonych treści i budowaniem własnej społeczności.
+    </p>
+  </section>
+  <section
+    id="copywriting"
+    class="pt-32 grid grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr] min-h-[36rem]"
+  >
+    <h1 class="sr-only">Copywriting</h1>
+    <Image
+      src={TitleCopywriting}
+      alt="copywriting"
+      class="mx-auto w-64 pb-8 sm:w-80 lg:col-start-2"
+    />
+    <div
+      class="mx-auto w-fit relative lg:col-start-1 lg:row-span-2 lg:row-start-1"
+    >
+      <Flower class="w-64 sm:w-96 -scale-x-100" />
+    </div>
+    <p
+      class="lg:col-start-2 lg:row-start-2 mx-auto flex flex-col items-end justify-end p-6 pt-8 max-w-[23rem] font-poppins font-light"
+    >
+      W 2023 roku skończyłam studia językoznawcze, a obecnie realizuję kierunek
+      twórcze pisanie.
+      <br />
+      Wiem jak redagować teksty, które są poprawne gramatycznie, zgodne z zasadami
+      SEO, a przede wszystkim przyciągają uwagę odbiorcy.
+      <Image
+        class="relative sm:left-10 pt-8 w-72"
+        src={QuoteSlowoWieleZnaczy}
+        alt="Słowo wiele znaczy"
+      />
     </p>
   </section>
   <SimpleMediaAndDescription
