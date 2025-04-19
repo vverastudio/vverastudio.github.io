@@ -1,16 +1,32 @@
 ---
 import PhoneInstagramBg from '../assets/phone-instagram-bg.png';
+import InstagramRecording from '../assets/instagram-recording.mp4';
 import PhotoGrid from '../assets/photo-grid.jpg';
 import { Image } from 'astro:assets';
 ---
 
 <div class="relative w-[8rem] h-[8rem] lg:w-[16rem] lg:h-[16rem]">
-  <Image
+  <div
+    class="phone-instagram-content absolute inset-0 flex justify-center items-center z-10 h-[100%]"
+  >
+    <div
+      class="w-0 h-0 flex justify-center items-center rotate-x-[50deg] rotate-z-[40deg] perspective-[3000px]"
+    >
+      <video
+        class="w-[8rem] lg:w-[16rem] max-w-none transform-3d -translate-x-[0.2rem] scale-50 origin-center"
+        src={InstagramRecording}
+        muted
+        autoplay
+        loop></video>
+    </div>
+  </div>
+  <!-- <Image
     class="phone-instagram-content absolute inset-0 z-10 h-[100%]"
     src={PhotoGrid}
     alt="TEMP"
     role="presentation"
-  />
+  /> -->
+
   <svg width="0" height="0">
     <defs>
       <clipPath id="phone-instagram-clippath" clipPathUnits="objectBoundingBox">
