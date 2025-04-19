@@ -12,6 +12,7 @@ import TitleOlejkiDoUstYourKayaEverydayLook from '../assets/title-olejki-do-ust-
 import MediaOlejkiDoUstYourKayaEverydayLook from '../assets/media-olejki-do-ust-your-kaya-everyday-look.mov';
 import TitleZelDoPraniaCoccolino from '../assets/title-zel-do-prania-coccolino.svg';
 import TitleUGC from '../assets/title-ugc.svg';
+import TitleStylizacjeZGumkamiFrancaUGCFashionLifestyle from '../assets/title-stylizacje-z-gumkami-franca-lifestyle.svg';
 import QuoteJestemStworzonaZebyTworzyc from '../assets/quote-jestem-stworzona-zeby-tworzyc.svg';
 import QuoteCzujeSieNajbardziej from '../assets/quote-czuje-sie-najbardziej-zywa-kiedy-ciagle-probuje.svg';
 import QuoteSocialMedia from '../assets/quote-social-media.svg';
@@ -22,6 +23,7 @@ import HandWithFlower from '../assets/hand-with-flower.png';
 import MiniWera1 from '../assets/mini-wera-1.png';
 import MiniWera2 from '../assets/mini-wera-2.png';
 import MiniWera3 from '../assets/mini-wera-3.png';
+import MediaStylizacjeZGumkamiFrancaUGCFashionLifestyle from '../assets/media-stylizacje-z-gumkami-franca-ufc-fashion-lifestyle.png';
 import DRES from '../assets/dres.mp4';
 import NavBar from './NavBar.astro';
 import Flower from './Flower.astro';
@@ -29,6 +31,7 @@ import Contact from './Contact.astro';
 import SimpleMediaAndDescription from './SimpleMediaAndDescription.astro';
 import PhoneInstagram from './PhoneInstagram.astro';
 import PortfolioSection from './PortfolioSection.astro';
+import PrzesuwaneKafelki from './PrzesuwaneKafelki.astro';
 ---
 
 <NavBar />
@@ -269,6 +272,37 @@ import PortfolioSection from './PortfolioSection.astro';
   </section>
   <PortfolioSection />
   <SimpleMediaAndDescription
+    name=" Stylizacje z gumkami Franca UGC Fashion / Lifestyle"
+  >
+    <Image
+      slot="title"
+      src={TitleStylizacjeZGumkamiFrancaUGCFashionLifestyle}
+      alt=" Stylizacje z gumkami Franca UGC Fashion / Lifestyle"
+      class="w-[28rem] mt-20"
+    />
+    <Image
+      slot="media"
+      src={MediaStylizacjeZGumkamiFrancaUGCFashionLifestyle}
+      alt="Zdjęcie produktu na smartfonie"
+      class="w-[20rem]"
+    />
+    <div slot="description" class="max-w-[26rem]">
+      <p>
+        Typ contentu: zdjęcia lifestyle (karuzela na IG)<br />
+        Produkt: gumki do włosów marki Franca<br />
+        Rola: koncepcja, stylizacje, zdjęcia, postprodukcja<br />
+        Kategoria: UGC – fashion / produkt w użyciu<br />
+        Cel: pokazanie wszechstronności produktu i jego dopasowania do różnych okazji.
+      </p><p class="mt-8">
+        W tym projekcie postawiłam na przedstawienie gumek Franca jako dodatku,
+        który realnie towarzyszy w codziennym życiu – od casualowego looku po
+        bardziej kobiece stylizacje. Każda gumka dopasowana była do innego
+        klimatu i okazji, by najlepiej pokazać ich styl oraz funkcjonalność.
+      </p>
+    </div>
+  </SimpleMediaAndDescription>
+  <PrzesuwaneKafelki />
+  <SimpleMediaAndDescription
     name="Olejki do ust Your Kaya UGC Beauty / Produkt w użyciu"
   >
     <Image
@@ -283,12 +317,13 @@ import PortfolioSection from './PortfolioSection.astro';
       alt="Zdjęcie produktu na smartfonie"
       class="w-[18rem]"
     />
-    <div slot="description">
+    <div slot="description" class="max-w-[25rem]">
       <p>
-        Typ contentu: zdjęcia beauty (karuzela na Instagram) Produkt: olejki do
-        ust marki Your Kaya Rola: koncepcja, stylizacja, zdjęcia, postprodukcja
-        Kategoria: UGC – beauty / produkt w użyciu Cel: podkreślenie estetyki
-        produktu i jego funkcji pielęgnacyjnej
+        Typ contentu: zdjęcia beauty (karuzela na Instagram)<br />
+        Produkt: olejki do ust marki Your Kaya<br />
+        Rola: koncepcja, stylizacja, zdjęcia, postprodukcja<br />
+        Kategoria: UGC – beauty / produkt w użyciu<br />
+        Cel: podkreślenie estetyki produktu i jego funkcji pielęgnacyjnej
       </p><p class="mt-8">
         W tej realizacji chciałam pokazać olejki Your Kaya jako codzienny, ale
         wyjątkowy element pielęgnacji – coś, co jest naturalnym przedłużeniem
@@ -307,12 +342,13 @@ import PortfolioSection from './PortfolioSection.astro';
       class="w-[28rem]"
     />
     <video controls slot="media" src={DRES} class="w-[18rem]"></video>
-    <div slot="description">
+    <div slot="description" class="max-w-[23rem]">
       <p>
-        Typ contentu: video Reels z voiceoverem Produkt: zestaw dresowy Noszę
-        Sztukę Rola: koncepcja, stylizacja, nagranie, voiceover, montaż
-        Kategoria: UGC – fashion / produkt w użyciu / body positive Cel:
-        pokazanie dopasowania zestawu do midsize sylwetki + przekaz wspierający
+        Typ contentu: video Reels z voiceoverem<br />
+        Produkt: zestaw dresowy Noszę Sztukę<br />
+        Rola: koncepcja, stylizacja, nagranie, voiceover, montaż<br />
+        Kategoria: UGC – fashion / produkt w użyciu / body positive<br />
+        Cel: pokazanie dopasowania zestawu do midsize sylwetki + przekaz wspierający
         akceptację ciała i wygodę noszenia
       </p><p class="mt-8">
         W tej rolce chciałam pokazać, że moda może być wygodna, dopasowana i
@@ -335,13 +371,15 @@ import PortfolioSection from './PortfolioSection.astro';
       slot="media"
       src={MediaZestawDoStylizacjiWlosow}
       class="w-[18rem]"></video>
-    <div slot="description">
+    <div slot="description" class="max-w-[23rem]">
       <p>
-        TyTyp contentu: Reels – pokaz działania produktów (beauty
-        tutorial/styling) Produkt: klej stylizujący + lakier do włosów Rola:
-        koncepcja, nagranie, stylizacja włosów, montaż, kreatywna oprawa
-        (grafika + elementy wiosenne) Kategoria: UGC – beauty/produkt w
-        użyciu/włosy Cel: prezentacja działania dwóch produktów w praktyce
+        Typ contentu: Reels – pokaz działania produktów (beauty
+        tutorial/styling)<br />
+        Produkt: klej stylizujący + lakier do włosów<br />
+        Rola: koncepcja, nagranie, stylizacja włosów, montaż, kreatywna oprawa (grafika
+        + elementy wiosenne)<br />
+        Kategoria: UGC – beauty/produkt w użyciu/włosy<br />
+        Cel: prezentacja działania dwóch produktów w praktyce
       </p><p class="mt-8">
         Ten Reels to stylizacyjna opowieść o dobrym dniu dla włosów – bez
         względu na kaprysy pogody. Pokazałam dwa sposoby użycia zestawu: krem
@@ -362,13 +400,15 @@ import PortfolioSection from './PortfolioSection.astro';
       slot="media"
       src={MediaOlejkiDoUstYourKayaEverydayLook}
       class="w-[18rem]"></video>
-    <div slot="description">
+    <div slot="description" class="max-w-[24.9rem]">
       <p>
-        Typ contentu: Reels – beauty – produkt w użyciu Produkt: 3 kolory
-        olejków do ust marki Your Kaya Rola: koncepcja, stylizacje, nagranie,
-        montaż, prezentacja produktu Kategoria: UGC – beauty / produkt w użyciu
-        / stylizacje Cel: pokazanie, że każdy kolor olejku pasuje do innego
-        nastroju i looku – produkt na co dzień, bez kompromisów
+        Typ contentu: Reels – beauty – produkt w użyciu<br />
+        Produkt: 3 kolory olejków do ust marki Your Kaya<br />
+        Rola: koncepcja, stylizacje, nagranie, montaż, prezentacja produktu<br
+        />
+        Kategoria: UGC – beauty / produkt w użyciu / stylizacje<br />
+        Cel: pokazanie, że każdy kolor olejku pasuje do innego nastroju i looku –
+        produkt na co dzień, bez kompromisów
       </p><p class="mt-8">
         W tej rolce pokazałam 3 odcienie olejków Your Kaya w akcji – każdy w
         innym klimacie. Celem było uchwycenie ich naturalnego efektu, łatwości

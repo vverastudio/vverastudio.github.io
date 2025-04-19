@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import QuotePrzesuwaneKafelki from '../assets/quote-przesuwane-kafelki.svg';
+import Franca2 from '../assets/franca-2.png';
+import Franca3 from '../assets/franca-3.png';
+import Franca4 from '../assets/franca-4.png';
+import Franca5 from '../assets/franca-5.png';
+import Flower from './Flower.astro';
+---
+
+<section class="relative mx-auto py-32 w-fit">
+  <h1 class="sr-only">Przesuwane kafelki</h1>
+  <Image
+    src={QuotePrzesuwaneKafelki}
+    alt="Przesuwane kafelki"
+    class="mx-auto w-64 lg:ml-24 lg:mr-0 lg:w-80"
+  />
+  <div
+    class="flex flex-wrap gap-y-4 justify-center mt-10 max-w-[20rem] lg:max-w-none"
+  >
+    <Image
+      src={Franca2}
+      alt="Screenshot telefonu"
+      role="presentation"
+      class="w-[7rem] h-[11rem] lg:w-[14rem] lg:h-[22rem] object-cover"
+    />
+    <Image
+      src={Franca3}
+      alt="Screenshot telefonu"
+      role="presentation"
+      class="w-[7rem] h-[11rem] lg:w-[14rem] lg:h-[22rem] object-cover"
+    />
+    <Image
+      src={Franca4}
+      alt="Screenshot telefonu"
+      role="presentation"
+      class="w-[7rem] h-[11rem] lg:w-[14rem] lg:h-[22rem] object-cover"
+    />
+    <Image
+      src={Franca5}
+      alt="Screenshot telefonu"
+      role="presentation"
+      class="w-[7rem] h-[11rem] lg:w-[14rem] lg:h-[22rem] object-cover"
+    />
+  </div>
+</section>
