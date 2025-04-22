@@ -7,35 +7,35 @@ import IdPhotoLight from '../assets/id-photo-light.png';
 import Flower from './Flower.astro';
 ---
 
-<section id="portfolio" class="relative mx-auto py-32 w-fit">
+<section id="portfolio" class="relative mx-auto py-64 w-fit">
   <h1 class="sr-only">Portfolio</h1>
   <Image src={TitlePortfolio} alt="Portfolio" class="mx-auto w-64 lg:w-80" />
   <div
-    class="flex flex-wrap justify-center gap-8 lg:gap-20 mt-10 max-w-[24rem] lg:max-w-none"
+    class="flex flex-wrap justify-center gap-4 lg:gap-20 mt-10 max-w-[24rem] lg:max-w-none"
   >
     <Image
       src={IdPhotoGrey}
       alt="Zdjęcie dowodu osobistego (1)"
       widths={[460]}
       sizes="460px"
-      class="w-32 lg:w-58 border border-black"
+      class="w-24 lg:w-58 border border-black"
     />
     <Image
       src={IdPhotoDark}
       alt="Zdjęcie dowodu osobistego (2)"
       widths={[460]}
       sizes="460px"
-      class="w-32 lg:w-58 border border-black"
+      class="w-24 lg:w-58 border border-black"
     />
     <Image
       src={IdPhotoLight}
       alt="Zdjęcie dowodu osobistego (3)"
       widths={[460]}
       sizes="460px"
-      class="w-32 lg:w-58 border border-black"
+      class="w-24 lg:w-58 border border-black"
     />
   </div>
   <Flower
-    class="absolute top-[20rem] right-28 w-32 lg:top-40 lg:-right-28 lg:w-48 -scale-x-100"
+    class="absolute top-[19rem] -right-8 w-20 lg:top-[18rem] lg:-right-28 lg:w-48 -scale-x-100"
   />
 </section>
