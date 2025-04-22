@@ -3,17 +3,20 @@
 ---
 
 <nav
+  aria-label="Main Navigation"
   class="group fixed z-99 inset-x-0 top-0 font-poppins font-light text-[#665f20] bg-[#FFFDE6]/50 backdrop-blur-3xl"
 >
   <button
     type="button"
     class="flex sm:hidden w-full h-8 flex-col justify-center items-center gap-1.5 focus:gap-0.5 transition-all ease-out duration-200 cursor-pointer"
+    aria-controls="navbar-dropdown"
   >
     <div class="w-6 h-0.25 bg-[currentColor]"></div>
     <div class="w-6 h-0.25 bg-[currentColor]"></div>
     <div class="w-6 h-0.25 bg-[currentColor]"></div>
   </button>
   <ul
+    id="navbar-dropdown"
     class="hidden group-focus-within:flex sm:flex flex-col sm:flex-row flex-wrap py-4 justify-center items-center gap-5"
   >
     <li><a href="#o-mnie">o mnie</a></li>
