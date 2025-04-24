@@ -47,12 +47,21 @@
 
 <script>
   const nav = document.querySelector('#main-navigation') as HTMLDivElement;
+  const navButton = document.querySelector(
+    '#main-navigation button'
+  ) as HTMLButtonElement;
 
-  nav.addEventListener('click', () => {
+  navButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+
     if (nav.dataset.open) {
       delete nav.dataset.open;
     } else {
       nav.dataset.open = 'true';
     }
+  });
+
+  nav.addEventListener('click', () => {
+    delete nav.dataset.open;
   });
 </script>
