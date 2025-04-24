@@ -4,7 +4,7 @@
 
 <div id="main-navigation" class="group">
   <div
-    class="backdrop group-not-[[data-open]]:hidden sm:hidden fixed z-50 inset-0 bg-black"
+    class="group-not-[[data-open]]:opacity-0 group-not-[[data-open]]:hidden:pointer-events-none sm:hidden fixed z-50 inset-0 backdrop-blur-sm transition-all"
   >
   </div>
   <nav
@@ -22,7 +22,7 @@
     </button>
     <ul
       id="navbar-dropdown"
-      class="hidden group-[[data-open]]:flex sm:flex flex-col sm:flex-row flex-wrap py-4 justify-center items-center gap-5"
+      class="border-b border-current sm:border-none hidden group-[[data-open]]:flex sm:flex flex-col sm:flex-row flex-wrap py-4 justify-center items-center gap-5"
     >
       <li><a href="#o-mnie">o mnie</a></li>
       <li><a href="#social-media">social media</a></li>
@@ -36,16 +36,6 @@
 
 <script>
   const nav = document.querySelector('#main-navigation') as HTMLDivElement;
-  const button = document.querySelector(
-    '#main-navigation button'
-  ) as HTMLButtonElement;
-  const backdrop = document.querySelector(
-    '#main-navigation .backdrop'
-  ) as HTMLDivElement;
-
-  // backdrop.addEventListener('mousedown', () => {
-  //   delete nav.dataset.open;
-  // });
 
   nav.addEventListener('click', () => {
     if (nav.dataset.open) {
