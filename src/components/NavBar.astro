@@ -2,28 +2,56 @@
 
 ---
 
-<nav
-  aria-label="Main Navigation"
-  class="group fixed z-99 inset-x-0 top-0 font-poppins font-light text-[#665f20] bg-[#FFFDE6]/50 backdrop-blur-3xl"
->
-  <button
-    type="button"
-    class="peer flex sm:hidden w-full h-8 flex-col justify-center items-center gap-1.5 active:gap-0.5 focus:gap-0.5 transition-all ease-out duration-200 cursor-pointer bg-[#FFFDE6]/50"
-    aria-controls="navbar-dropdown"
+<div id="main-navigation" class="group">
+  <div
+    class="backdrop group-not-[[data-open]]:hidden sm:hidden fixed z-50 inset-0 bg-black"
   >
-    <div class="w-6 h-0.25 bg-[currentColor]"></div>
-    <div class="w-6 h-0.25 bg-[currentColor]"></div>
-    <div class="w-6 h-0.25 bg-[currentColor]"></div>
-  </button>
-  <ul
-    id="navbar-dropdown"
-    class="hidden peer-active:flex group-focus-within:flex sm:flex flex-col sm:flex-row flex-wrap py-4 justify-center items-center gap-5"
+  </div>
+  <nav
+    aria-label="Main Navigation"
+    class="isolate fixed z-99 inset-x-0 top-0 font-poppins font-light text-[#665f20] bg-[#FFFDE6]/50 backdrop-blur-3xl"
   >
-    <li><a href="#o-mnie">o mnie</a></li>
-    <li><a href="#social-media">social media</a></li>
-    <li><a href="#copywriting">copywriting</a></li>
-    <li><a href="#ugc">ugc</a></li>
-    <li><a href="#portfolio">portfolio</a></li>
-    <li><a href="#kontakt">kontakt</a></li>
-  </ul>
-</nav>
+    <button
+      type="button"
+      class="flex sm:hidden w-full h-8 flex-col justify-center items-center gap-1.5 active:gap-0.5 focus:gap-0.5 transition-all ease-out duration-200 cursor-pointer bg-[#FFFDE6]/50"
+      aria-controls="navbar-dropdown"
+    >
+      <div class="w-6 h-0.25 bg-[currentColor]"></div>
+      <div class="w-6 h-0.25 bg-[currentColor]"></div>
+      <div class="w-6 h-0.25 bg-[currentColor]"></div>
+    </button>
+    <ul
+      id="navbar-dropdown"
+      class="hidden group-[[data-open]]:flex sm:flex flex-col sm:flex-row flex-wrap py-4 justify-center items-center gap-5"
+    >
+      <li><a href="#o-mnie">o mnie</a></li>
+      <li><a href="#social-media">social media</a></li>
+      <li><a href="#copywriting">copywriting</a></li>
+      <li><a href="#ugc">ugc</a></li>
+      <li><a href="#portfolio">portfolio</a></li>
+      <li><a href="#kontakt">kontakt</a></li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+  const nav = document.querySelector('#main-navigation') as HTMLDivElement;
+  const button = document.querySelector(
+    '#main-navigation button'
+  ) as HTMLButtonElement;
+  const backdrop = document.querySelector(
+    '#main-navigation .backdrop'
+  ) as HTMLDivElement;
+
+  // backdrop.addEventListener('mousedown', () => {
+  //   delete nav.dataset.open;
+  // });
+
+  nav.addEventListener('click', () => {
+    if (nav.dataset.open) {
+      delete nav.dataset.open;
+    } else {
+      nav.dataset.open = 'true';
+    }
+  });
+</script>
