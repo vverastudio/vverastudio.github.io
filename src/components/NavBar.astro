@@ -8,7 +8,7 @@
 >
   <button
     type="button"
-    class="flex sm:hidden w-full h-8 flex-col justify-center items-center gap-1.5 focus:gap-0.5 transition-all ease-out duration-200 cursor-pointer"
+    class="peer flex sm:hidden w-full h-8 flex-col justify-center items-center gap-1.5 active:gap-0.5 focus:gap-0.5 transition-all ease-out duration-200 cursor-pointer"
     aria-controls="navbar-dropdown"
   >
     <div class="w-6 h-0.25 bg-[currentColor]"></div>
@@ -17,7 +17,7 @@
   </button>
   <ul
     id="navbar-dropdown"
-    class="hidden group-focus-within:flex sm:flex flex-col sm:flex-row flex-wrap py-4 justify-center items-center gap-5"
+    class="hidden peer-active:flex group-focus-within:flex sm:flex flex-col sm:flex-row flex-wrap py-4 justify-center items-center gap-5"
   >
     <li><a href="#o-mnie">o mnie</a></li>
     <li><a href="#social-media">social media</a></li>
