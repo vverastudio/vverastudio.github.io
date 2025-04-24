@@ -155,7 +155,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
       />
     </div>
     <div class="pt-6 pb-12 lg:col-start-1 lg:row-start-2 place-content-center">
-      <div class="relative pl-32 lg:pl-36 w-fit">
+      <div class="mx-auto relative lg:pl-36 w-fit">
         <Image
           src={OMojejDrodze}
           widths={[636]}
@@ -163,11 +163,15 @@ import YourKayaGrid from './YourKayaGrid.astro';
           alt="A picture of Weronika Kubala"
           class="border border-black w-60 lg:w-80"
         />
-        <Flower class="absolute left-10 bottom-0 w-32 lg:left-0 lg:w-60" />
+        <Flower
+          class="absolute -left-10 -bottom-10 w-32 lg:left-0 lg:bottom-0 lg:w-60"
+        />
       </div>
     </div>
     <div class="lg:col-start-2 lg:row-start-1 lg:row-span-2 p-6 flex flex-col">
-      <p class="w-[19rem] font-poppins font-light mr-16">
+      <p
+        class="w-[19rem] font-poppins font-light self-center lg:mr-16 lg:self-start text-justify lg:text-left"
+      >
         Mam 24 lata.
         <br />
         Od dzieciństwa szukałam swojego miejsca w artystycznym świecie. Próbowałam
@@ -182,7 +186,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
       <Image
         src={QuoteCzujeZeNaprawdeZyje}
         alt="Czuję się najbardziej żywa kiedy ciągle próbuję"
-        class="self-end w-80 mt-6"
+        class="self-center lg:self-end w-80 mt-6"
       />
     </div>
   </section>
@@ -223,7 +227,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
       </div>
     </div>
     <p
-      class="mx-auto p-6 pt-8 max-w-[23rem] font-poppins font-light lg:col-start-1 lg:row-start-2"
+      class="mx-auto p-6 pt-8 max-w-[23rem] font-poppins font-light lg:col-start-1 lg:row-start-2 text-justify lg:text-left"
     >
       W 2024 roku postanowiłam spełnić swoje marzenie o prowadzeniu mediów
       społecznościowych.
@@ -251,7 +255,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
       <Flower class="w-64 sm:w-96 -scale-x-100" />
     </div>
     <p
-      class="lg:col-start-2 lg:row-start-2 mx-auto flex flex-col items-end justify-end p-6 pt-8 max-w-[23rem] font-poppins font-light"
+      class="lg:col-start-2 lg:row-start-2 mx-auto flex flex-col items-center lg:items-end justify-end p-6 pt-8 max-w-[23rem] font-poppins font-light text-justify lg:text-left"
     >
       W 2023 roku skończyłam studia językoznawcze, a obecnie realizuję kierunek
       twórcze pisanie.
@@ -259,7 +263,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
       Wiem jak redagować teksty, które są poprawne gramatycznie, zgodne z zasadami
       SEO, a przede wszystkim przyciągają uwagę odbiorcy.
       <Image
-        class="relative sm:left-10 pt-8 w-72"
+        class="relative lg:left-10 pt-8 w-72"
         src={QuoteSlowoWieleZnaczy}
         alt="Słowo wiele znaczy"
       />
@@ -287,7 +291,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
       />
     </div>
     <p
-      class="lg:col-start-2 lg:row-start-2 mx-auto flex flex-col items-end justify-end px-6 pt-8 max-w-[20rem] font-poppins font-light"
+      class="lg:col-start-2 lg:row-start-2 mx-auto flex flex-col items-end justify-end px-6 pt-8 max-w-[20rem] font-poppins font-light text-justify lg:text-left"
     >
       Po roku praktyki i wielu kursach tematycznych, jestem gotowa, by przenieść
       swoje działania na wyższy, profesjonalny poziom.
