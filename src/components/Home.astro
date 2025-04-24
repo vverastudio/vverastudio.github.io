@@ -43,11 +43,11 @@ import YourKayaGrid from './YourKayaGrid.astro';
 ---
 
 <NavBar />
-<main class="">
+<main>
   <!-- <p class="font-msmadi text-xl mb-10">trwa proces twórczy</p> -->
-  <section id="o-mnie" class="mb-20">
+  <section id="o-mnie" class="mt-32 lg:mt-48 mb-20 scroll-mt-32">
     <h1 class="sr-only">O mnie</h1>
-    <div class="hidden lg:flex justify-center items-start pt-48">
+    <div class="hidden lg:flex justify-center items-start">
       <!-- Desktop -->
       <div class="relative w-[21rem] h-[36rem]">
         <Flower class="absolute top-28 left-40 w-60 -scale-x-100" />
@@ -97,7 +97,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
         <Flower class="absolute bottom-4 -right-16 w-[15rem] -scale-x-100" />
       </div>
     </div>
-    <div class="flex lg:hidden flex-col items-center pt-32">
+    <div class="flex lg:hidden flex-col items-center">
       <!-- Mobile -->
       <Image
         src={TitleWeronikaKubala}
@@ -188,7 +188,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
   </section>
   <section
     id="social-media"
-    class="pt-32 grid grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
+    class="mt-32 scroll-mt-32 grid grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
   >
     <Image
       src={QuoteSocialMedia}
@@ -237,7 +237,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
   </section>
   <section
     id="copywriting"
-    class="mx-auto pt-64 pb-32 w-fit grid lg:gap-x-16 grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr] min-h-[36rem]"
+    class="mx-auto mt-64 scroll-mt-32 pb-32 w-fit grid lg:gap-x-16 grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr] min-h-[36rem]"
   >
     <h1 class="sr-only">Copywriting</h1>
     <Image
@@ -267,7 +267,7 @@ import YourKayaGrid from './YourKayaGrid.astro';
   </section>
   <section
     id="ugc"
-    class="mx-auto pt-64 pb-32 w-fit grid lg:gap-x-36 grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
+    class="mx-auto mt-64 scroll-mt-32 pb-32 w-fit grid lg:gap-x-36 grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
   >
     <h1 class="sr-only">UGC</h1>
     <Image
