@@ -9,11 +9,11 @@
   </div>
   <nav
     aria-label="Main Navigation"
-    class="isolate fixed z-99 inset-x-0 top-0 font-poppins font-light text-[#665f20] bg-[#FFFDE6]/50 backdrop-blur-3xl"
+    class="isolate fixed z-99 inset-x-0 top-0 font-poppins font-light text-[#665f20] bg-[#F8EEE8]/50 backdrop-blur-3xl"
   >
     <button
       type="button"
-      class="flex sm:hidden w-full h-8 flex-col justify-center items-center gap-1.5 group-[[data-open]]:gap-0.5 transition-all ease-out duration-200 cursor-pointer bg-[#FFFDE6]/50"
+      class="flex sm:hidden w-full h-8 flex-col justify-center items-center gap-1.5 group-[[data-open]]:gap-0.5 transition-all ease-out duration-200 cursor-pointer bg-[#F8EEE8]/50"
       aria-controls="navbar-dropdown"
     >
       <div class="w-6 h-0.25 bg-[currentColor]"></div>
@@ -48,7 +48,7 @@
 <script>
   const nav = document.querySelector('#main-navigation') as HTMLDivElement;
   const navButton = document.querySelector(
-    '#main-navigation button'
+    '#main-navigation button',
   ) as HTMLButtonElement;
 
   navButton.addEventListener('click', (event) => {
