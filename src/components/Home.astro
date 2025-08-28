@@ -1,567 +1,654 @@
 ---
-import { Image } from 'astro:assets';
-import OMojejDrodze from '../assets/o-mojej-drodze.png';
-import TitleWeronikaKubala from '../assets/title-weronika-kubala.svg';
-import TitleOMojejDrodze from '../assets/title-o-mojej-drodze.svg';
-import TitleCopywriting from '../assets/title-copywriting.svg';
-import TitleOlejkiDoUstYourKayaProduktWUzyciu from '../assets/title-olejki-do-ust-your-kaya-produkt-w-uzyciu.svg';
-import MediaOlejkiDoUstYourKayaProduktWUzyciu from '../assets/media-olejki-do-ust-your-kaya-produkt-w-uzyciu.png';
-import TitleZestawDoStylizacjiWlosow from '../assets/title-zestaw-do-stylizacji-wlosow-got2be-produkt-w-uzyciu.svg';
-import MediaZestawDoStylizacjiWlosow from '../assets/media-zestaw-do-stylizacji-wlosow-got2be-produkt-w-uzyciu.mp4';
-import TitleOlejkiDoUstYourKayaEverydayLook from '../assets/title-olejki-do-ust-your-kaya-everyday-look.svg';
-import MediaOlejkiDoUstYourKayaEverydayLook from '../assets/media-olejki-do-ust-your-kaya-everyday-look.mp4';
-import TitleZelDoPraniaCoccolino from '../assets/title-zel-do-prania-coccolino.svg';
-import TitleUGC from '../assets/title-ugc.svg';
-import TitleStylizacjeZGumkamiFrancaUGCFashionLifestyle from '../assets/title-stylizacje-z-gumkami-franca-lifestyle.svg';
-import TitleZestawNoszeSztukeUGCFashionTryOnHaul from '../assets/title-zestaw-nosze-sztuke-ugc-fashion-try-on-haul.svg';
-import TitleLampkaNocnaWestwingUGCHomeDecorStorytelling from '../assets/title-lampka-nocna-westwing-storyteling.svg';
-import MediaLampkaNocnaWestwingUGCHomeDecorStorytelling from '../assets/media-lampka-nocna-westwing-storyteling.mp4';
-import TitleUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover from '../assets/title-unboxing-gumek-franca-voiceover.svg';
-import MediaUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover from '../assets/media-unboxing-gumek-franca-voiceover.mp4';
-import TitleWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine from '../assets/title-wieczorna-pielegnacja-z-basic-lab-skincare-routine.svg';
-import MediaWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine from '../assets/media-wieczorna-pielegnacja-z-basic-lab-skincare-routine.png';
-import QuoteJestemStworzonaZebyTworzyc from '../assets/quote-jestem-stworzona-zeby-tworzyc.svg';
-import QuoteCzujeZeNaprawdeZyje from '../assets/quote-czuje-ze-naprawde-zyje-kiedy-ciagle-probuje.svg';
-import QuoteSocialMedia from '../assets/quote-social-media.svg';
-import QuoteSlowoWieleZnaczy from '../assets/quote-slowo-wiele-znaczy.svg';
-import InstagramScreenshot from '../assets/instagram-screenshot.jpg';
-import HandWithBouquet from '../assets/hand-with-bouquet.png';
-import HandWithFlower from '../assets/hand-with-flower.png';
-import MiniWera1 from '../assets/mini-wera-1.png';
-import MiniWera2 from '../assets/mini-wera-2.png';
-import MiniWera3 from '../assets/mini-wera-3.png';
-import MediaStylizacjeZGumkamiFrancaUGCFashionLifestyle from '../assets/media-stylizacje-z-gumkami-franca-ufc-fashion-lifestyle.png';
-import DRES from '../assets/dres.mp4';
-import NavBar from './NavBar.astro';
-import Flower from './Flower.astro';
-import Contact from './Contact.astro';
-import SimpleMediaAndDescription from './SimpleMediaAndDescription.astro';
-import PhoneInstagram from './PhoneInstagram.astro';
-import PortfolioSection from './PortfolioSection.astro';
-import PrzesuwaneKafelki from './PrzesuwaneKafelki.astro';
-import YourKayaGrid from './YourKayaGrid.astro';
+import { Image } from "astro:assets";
+import OMojejDrodze from "../assets/o-mojej-drodze.png";
+import TitleWeronikaKubala from "../assets/title-weronika-kubala.svg";
+import TitleOMojejDrodze from "../assets/title-o-mojej-drodze.svg";
+import TitleCopywriting from "../assets/title-copywriting.svg";
+import TitleOlejkiDoUstYourKayaProduktWUzyciu from "../assets/title-olejki-do-ust-your-kaya-produkt-w-uzyciu.svg";
+import MediaOlejkiDoUstYourKayaProduktWUzyciu from "../assets/media-olejki-do-ust-your-kaya-produkt-w-uzyciu.png";
+import TitleZestawDoStylizacjiWlosow from "../assets/title-zestaw-do-stylizacji-wlosow-got2be-produkt-w-uzyciu.svg";
+import MediaZestawDoStylizacjiWlosow from "../assets/media-zestaw-do-stylizacji-wlosow-got2be-produkt-w-uzyciu.mp4";
+import TitleOlejkiDoUstYourKayaEverydayLook from "../assets/title-olejki-do-ust-your-kaya-everyday-look.svg";
+import MediaOlejkiDoUstYourKayaEverydayLook from "../assets/media-olejki-do-ust-your-kaya-everyday-look.mp4";
+import TitleZelDoPraniaCoccolino from "../assets/title-zel-do-prania-coccolino.svg";
+import TitleUGC from "../assets/title-ugc.svg";
+import TitleStylizacjeZGumkamiFrancaUGCFashionLifestyle from "../assets/title-stylizacje-z-gumkami-franca-lifestyle.svg";
+import TitleZestawNoszeSztukeUGCFashionTryOnHaul from "../assets/title-zestaw-nosze-sztuke-ugc-fashion-try-on-haul.svg";
+import TitleLampkaNocnaWestwingUGCHomeDecorStorytelling from "../assets/title-lampka-nocna-westwing-storyteling.svg";
+import MediaLampkaNocnaWestwingUGCHomeDecorStorytelling from "../assets/media-lampka-nocna-westwing-storyteling.mp4";
+import TitleUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover from "../assets/title-unboxing-gumek-franca-voiceover.svg";
+import MediaUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover from "../assets/media-unboxing-gumek-franca-voiceover.mp4";
+import TitleWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine from "../assets/title-wieczorna-pielegnacja-z-basic-lab-skincare-routine.svg";
+import MediaWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine from "../assets/media-wieczorna-pielegnacja-z-basic-lab-skincare-routine.png";
+import TitleKosmetykiDoPielegnacjiTwarzy from "../assets/title-kosmetyki-do-pielegnacji-twarzy.svg";
+import MediaKosmetykiDoPielegnacjiTwarzy from "../assets/media-kosmetyki-do-pielegnacji-twarzy.mp4";
+import TitleTorbaEkologicznaCafeLisboa from "../assets/title-torba-ekologiczna-cafe-lisboa.svg";
+import MediaTorbaEkologicznaCafeLisboa from "../assets/media-torba-ekologiczna-cafe-lisboa.mp4";
+import MediaWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine from "../assets/media-wieczorna-pielegnacja-z-basic-lab-skincare-routine.png";
+import QuoteJestemStworzonaZebyTworzyc from "../assets/quote-jestem-stworzona-zeby-tworzyc.svg";
+import QuoteCzujeZeNaprawdeZyje from "../assets/quote-czuje-ze-naprawde-zyje-kiedy-ciagle-probuje.svg";
+import QuoteSocialMedia from "../assets/quote-social-media.svg";
+import QuoteSlowoWieleZnaczy from "../assets/quote-slowo-wiele-znaczy.svg";
+import InstagramScreenshot from "../assets/instagram-screenshot.jpg";
+import HandWithBouquet from "../assets/hand-with-bouquet.png";
+import HandWithFlower from "../assets/hand-with-flower.png";
+import MiniWera1 from "../assets/mini-wera-1.png";
+import MiniWera2 from "../assets/mini-wera-2.png";
+import MiniWera3 from "../assets/mini-wera-3.png";
+import MediaStylizacjeZGumkamiFrancaUGCFashionLifestyle from "../assets/media-stylizacje-z-gumkami-franca-ufc-fashion-lifestyle.png";
+import DRES from "../assets/dres.mp4";
+import NavBar from "./NavBar.astro";
+import Flower from "./Flower.astro";
+import Contact from "./Contact.astro";
+import SimpleMediaAndDescription from "./SimpleMediaAndDescription.astro";
+import PhoneInstagram from "./PhoneInstagram.astro";
+import PortfolioSection from "./PortfolioSection.astro";
+import PrzesuwaneKafelki from "./PrzesuwaneKafelki.astro";
+import YourKayaGrid from "./YourKayaGrid.astro";
 ---
 
 <NavBar />
 <main>
-  <!-- <p class="font-msmadi text-xl mb-10">trwa proces twórczy</p> -->
-  <section id="o-mnie" class="mt-32 lg:mt-48 mb-20 scroll-mt-32">
-    <h1 class="sr-only">O mnie</h1>
-    <div class="hidden lg:flex justify-center items-start">
-      <!-- Desktop -->
-      <div class="relative w-[21rem] h-[36rem]">
-        <Flower class="absolute top-28 left-40 w-60 -scale-x-100" />
-        <Flower class="absolute top-0 left-0 w-60" />
+    <!-- <p class="font-msmadi text-xl mb-10">trwa proces twórczy</p> -->
+    <section id="o-mnie" class="mt-32 lg:mt-48 mb-20 scroll-mt-32">
+        <h1 class="sr-only">O mnie</h1>
+        <div class="hidden lg:flex justify-center items-start">
+            <!-- Desktop -->
+            <div class="relative w-[21rem] h-[36rem]">
+                <Flower class="absolute top-28 left-40 w-60 -scale-x-100" />
+                <Flower class="absolute top-0 left-0 w-60" />
+                <Image
+                    src={MiniWera2}
+                    class="absolute top-0 left-2 w-28"
+                    widths={[224]}
+                    sizes="224px"
+                    alt="A picture of Weronika Kubala"
+                    role="presentation"
+                />
+                <Image
+                    src={MiniWera3}
+                    class="absolute top-48 left-14 w-72"
+                    widths={[650]}
+                    sizes="650px"
+                    alt="A picture of Weronika Kubala"
+                    role="presentation"
+                />
+            </div>
+            <div class="pt-4">
+                <Image
+                    src={TitleWeronikaKubala}
+                    alt="Weronika Kubala"
+                    class="w-[30rem]"
+                />
+                <p class="font-poppins font-light max-w-56 ml-24 mt-20 mb-12">
+                    Całe dotychczasowe życie spędziłam na odkrywaniu jednej
+                    prawdy o sobie:
+                </p>
+                <Image
+                    src={QuoteJestemStworzonaZebyTworzyc}
+                    alt="Jestem stworzona żeby tworzyć"
+                    class="ml-28 w-96"
+                />
+            </div>
+            <div class="relative w-[16rem] h-[36rem]">
+                <Image
+                    src={MiniWera1}
+                    class="absolute bottom-0 right-0 w-[16rem]"
+                    widths={[512]}
+                    sizes="512px"
+                    alt="A picture of Weronika Kubala"
+                    role="presentation"
+                />
+                <Flower
+                    class="absolute bottom-4 -right-16 w-[15rem] -scale-x-100"
+                />
+            </div>
+        </div>
+        <div class="flex lg:hidden flex-col items-center">
+            <!-- Mobile -->
+            <Image
+                src={TitleWeronikaKubala}
+                alt="Weronika Kubala"
+                class="w-[20rem] mb-8"
+            />
+            <div class="flex justify-center">
+                <div class="relative w-[10rem] h-[14rem]">
+                    <Flower class="absolute top-8 left-0 w-32" />
+                    <Image
+                        src={MiniWera2}
+                        widths={[192]}
+                        sizes="192px"
+                        class="absolute top-0 left-0 w-20"
+                        alt="A picture of Weronika Kubala"
+                        role="presentation"
+                    />
+                </div>
+                <div class="relative">
+                    <p class="font-poppins font-light max-w-56 pt-8">
+                        Całe dotychczasowe życie spędziłam na odkrywaniu jednej
+                        prawdy o sobie:
+                    </p>
+                </div>
+            </div>
+            <Image
+                src={QuoteJestemStworzonaZebyTworzyc}
+                alt="Jestem stworzona żeby tworzyć"
+                class="max-w-none w-64"
+            />
+            <div class="flex justify-center pt-20">
+                <div class="relative w-[20rem] h-[23rem]">
+                    <Flower class="absolute top-0 left-26 w-52 -scale-x-100" />
+                    <Image
+                        src={MiniWera3}
+                        widths={[480]}
+                        sizes="480px"
+                        class="absolute top-12 left-0 w-60"
+                        alt="A picture of Weronika Kubala"
+                        role="presentation"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+        class="pt-24 mb-20 w-fit w-content mx-auto grid grid-cols-1 grid-rows-[auto,auto,auto] lg:grid-cols-[auto,auto] lg:grid-rows-[auto,1fr] gap-x-20"
+    >
+        <h1 class="sr-only">O mojej drodze</h1>
+        <div class="lg:col-start-1 lg:row-start-1 flex justify-end">
+            <Image
+                class="mx-auto w-[16rem] sm:w-[30rem]"
+                src={TitleOMojejDrodze}
+                alt="O mojej drodze"
+            />
+        </div>
+        <div
+            class="pt-6 pb-12 lg:col-start-1 lg:row-start-2 place-content-center"
+        >
+            <div class="mx-auto relative lg:pl-36 w-fit">
+                <Image
+                    src={OMojejDrodze}
+                    widths={[636]}
+                    sizes="636px"
+                    alt="A picture of Weronika Kubala"
+                    class="border border-black w-60 lg:w-80"
+                />
+                <Flower
+                    class="absolute -left-10 -bottom-10 w-32 lg:left-0 lg:bottom-0 lg:w-60"
+                />
+            </div>
+        </div>
+        <div
+            class="lg:col-start-2 lg:row-start-1 lg:row-span-2 p-6 flex flex-col"
+        >
+            <p
+                class="w-[19rem] font-poppins font-light self-center lg:mr-16 lg:self-start text-center lg:text-left"
+            >
+                Mam 24 lata.
+                <br />
+                Od dzieciństwa szukałam swojego miejsca w artystycznym świecie. Próbowałam
+                odnaleźć go w śpiewie solowym, pisaniu książek, modzie, blogowaniu,
+                vlogowaniu, prowadzeniu social mediów, tworzeniu grafik, pieczeniu
+                i dekorowaniu tortów,
+                <br />graniu na gitarze i pianinie.
+                <br />
+                Z czasem traciłam zainteresowanie, a kiedy coś się nie udawało, zakładałam,
+                że odnoszę porażkę. Dzisiaj wiem, że moim powołaniem nie jest jedna
+                rzecz, lecz odkrywanie i realizacja w wielu.
+            </p>
+            <Image
+                src={QuoteCzujeZeNaprawdeZyje}
+                alt="Czuję się najbardziej żywa kiedy ciągle próbuję"
+                class="self-center lg:self-end w-80 mt-6"
+            />
+        </div>
+    </section>
+    <section
+        id="social-media"
+        class="mt-32 scroll-mt-32 grid grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
+    >
         <Image
-          src={MiniWera2}
-          class="absolute top-0 left-2 w-28"
-          widths={[224]}
-          sizes="224px"
-          alt="A picture of Weronika Kubala"
-          role="presentation"
+            src={QuoteSocialMedia}
+            alt="social media"
+            class="mx-auto w-64 pb-8 sm:w-80 lg:col-start-1"
         />
-        <Image
-          src={MiniWera3}
-          class="absolute top-48 left-14 w-72"
-          widths={[650]}
-          sizes="650px"
-          alt="A picture of Weronika Kubala"
-          role="presentation"
-        />
-      </div>
-      <div class="pt-4">
-        <Image
-          src={TitleWeronikaKubala}
-          alt="Weronika Kubala"
-          class="w-[30rem]"
-        />
-        <p class="font-poppins font-light max-w-56 ml-24 mt-20 mb-12">
-          Całe dotychczasowe życie spędziłam na odkrywaniu jednej prawdy o
-          sobie:
+        <div
+            class="mx-auto w-fit relative flex items-end gap-4 lg:gap-8 pb-8 lg:pb-16 pr-7 lg:pr-14 lg:col-start-2 lg:row-span-2"
+        >
+            <Image
+                src={InstagramScreenshot}
+                widths={[572]}
+                sizes="572px"
+                alt="Instagram screenshot"
+                class="w-[9rem] lg:w-[18rem] border border-black"
+            />
+            <div
+                class="bg-[#665f20] w-[7rem] h-[10.5rem] lg:w-[14rem] lg:h-[21rem] border border-black"
+            >
+            </div>
+            <Image
+                src={HandWithBouquet}
+                widths={[768]}
+                sizes="768px"
+                alt="Bukiet kwiatów"
+                class="absolute right-0 bottom-0 w-[12rem] lg:w-[24rem]"
+            />
+            <div
+                class="absolute top-0 right-16 lg:top-[unset] lg:bottom-0 lg:right-[unset] lg:-left-48"
+            >
+                <PhoneInstagram />
+            </div>
+        </div>
+        <p
+            class="mx-auto p-6 pt-8 max-w-[23rem] font-poppins font-light lg:col-start-1 lg:row-start-2 text-center lg:text-left"
+        >
+            W 2024 roku postanowiłam spełnić swoje marzenie o prowadzeniu mediów
+            społecznościowych.
+            <br />
+            Równolegle pracuję, dlatego działalność w internecie stała się dodatkiem
+            do życia.
+            <br />
+            Dziś wiem, że nigdy nie czułam podobnej satysfakcji, niż ta powiązana
+            z publikacją tworzonych treści i budowaniem własnej społeczności.
         </p>
+    </section>
+    <section
+        id="copywriting"
+        class="mx-auto mt-64 scroll-mt-32 pb-32 w-fit grid lg:gap-x-16 grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr] min-h-[36rem]"
+    >
+        <h1 class="sr-only">Copywriting</h1>
         <Image
-          src={QuoteJestemStworzonaZebyTworzyc}
-          alt="Jestem stworzona żeby tworzyć"
-          class="ml-28 w-96"
+            src={TitleCopywriting}
+            alt="copywriting"
+            class="mx-auto w-64 pb-8 sm:w-80 lg:col-start-2"
         />
-      </div>
-      <div class="relative w-[16rem] h-[36rem]">
+        <div
+            class="mx-auto w-fit relative lg:col-start-1 lg:row-span-2 lg:row-start-1"
+        >
+            <Flower class="w-64 sm:w-96 -scale-x-100" />
+        </div>
+        <p
+            class="lg:col-start-2 lg:row-start-2 mx-auto flex flex-col items-center lg:items-end justify-end p-6 pt-8 max-w-[23rem] font-poppins font-light text-center lg:text-left"
+        >
+            W 2023 roku skończyłam studia językoznawcze. Realizowałam również
+            kierunek twórcze pisanie.
+            <br />
+            Wiem jak redagować teksty, które są poprawne gramatycznie, zgodne z zasadami
+            SEO, a przede wszystkim przyciągają uwagę odbiorcy.
+            <Image
+                class="relative lg:left-10 pt-8 w-72"
+                src={QuoteSlowoWieleZnaczy}
+                alt="Słowo wiele znaczy"
+            />
+        </p>
+    </section>
+    <section
+        id="ugc"
+        class="mx-auto mt-64 scroll-mt-32 pb-32 w-fit grid lg:gap-x-36 grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
+    >
+        <h1 class="sr-only">UGC</h1>
         <Image
-          src={MiniWera1}
-          class="absolute bottom-0 right-0 w-[16rem]"
-          widths={[512]}
-          sizes="512px"
-          alt="A picture of Weronika Kubala"
-          role="presentation"
+            src={TitleUGC}
+            alt="UGC"
+            class="mx-auto w-32 pb-8 sm:w-48 lg:col-start-2"
         />
-        <Flower class="absolute bottom-4 -right-16 w-[15rem] -scale-x-100" />
-      </div>
-    </div>
-    <div class="flex lg:hidden flex-col items-center">
-      <!-- Mobile -->
-      <Image
-        src={TitleWeronikaKubala}
-        alt="Weronika Kubala"
-        class="w-[20rem] mb-8"
-      />
-      <div class="flex justify-center">
-        <div class="relative w-[10rem] h-[14rem]">
-          <Flower class="absolute top-8 left-0 w-32" />
-          <Image
-            src={MiniWera2}
-            widths={[192]}
-            sizes="192px"
-            class="absolute top-0 left-0 w-20"
-            alt="A picture of Weronika Kubala"
-            role="presentation"
-          />
+        <div
+            class="mx-auto w-fit relative lg:col-start-1 lg:row-span-2 lg:row-start-1"
+        >
+            <Image
+                src={HandWithFlower}
+                alt="Kwiat w mojej dłoni"
+                widths={[572]}
+                sizes="572px"
+                class="w-72 border border-black"
+            />
         </div>
-        <div class="relative">
-          <p class="font-poppins font-light max-w-56 pt-8">
-            Całe dotychczasowe życie spędziłam na odkrywaniu jednej prawdy o
-            sobie:
-          </p>
-        </div>
-      </div>
-      <Image
-        src={QuoteJestemStworzonaZebyTworzyc}
-        alt="Jestem stworzona żeby tworzyć"
-        class="max-w-none w-64"
-      />
-      <div class="flex justify-center pt-20">
-        <div class="relative w-[20rem] h-[23rem]">
-          <Flower class="absolute top-0 left-26 w-52 -scale-x-100" />
-          <Image
-            src={MiniWera3}
-            widths={[480]}
-            sizes="480px"
-            class="absolute top-12 left-0 w-60"
-            alt="A picture of Weronika Kubala"
-            role="presentation"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-  <section
-    class="pt-24 mb-20 w-fit w-content mx-auto grid grid-cols-1 grid-rows-[auto,auto,auto] lg:grid-cols-[auto,auto] lg:grid-rows-[auto,1fr] gap-x-20"
-  >
-    <h1 class="sr-only">O mojej drodze</h1>
-    <div class="lg:col-start-1 lg:row-start-1 flex justify-end">
-      <Image
-        class="mx-auto w-[16rem] sm:w-[30rem]"
-        src={TitleOMojejDrodze}
-        alt="O mojej drodze"
-      />
-    </div>
-    <div class="pt-6 pb-12 lg:col-start-1 lg:row-start-2 place-content-center">
-      <div class="mx-auto relative lg:pl-36 w-fit">
+        <p
+            class="lg:col-start-2 lg:row-start-2 mx-auto flex flex-col items-end justify-end px-6 pt-8 max-w-[20rem] font-poppins font-light text-center lg:text-left"
+        >
+            Po roku praktyki i wielu kursach tematycznych, jestem gotowa, by
+            przenieść swoje działania na wyższy, profesjonalny poziom.
+            <br />
+            Tworzę estetyczne, autentyczne treści wideo dla marek z branży lifestyle,
+            beauty i home decor.
+        </p>
+    </section>
+    <PortfolioSection />
+    <SimpleMediaAndDescription
+        name=" Stylizacje z gumkami Franca UGC Fashion / Lifestyle"
+    >
         <Image
-          src={OMojejDrodze}
-          widths={[636]}
-          sizes="636px"
-          alt="A picture of Weronika Kubala"
-          class="border border-black w-60 lg:w-80"
+            slot="title"
+            src={TitleStylizacjeZGumkamiFrancaUGCFashionLifestyle}
+            alt=" Stylizacje z gumkami Franca UGC Fashion / Lifestyle"
+            class="w-[28rem] mt-20"
         />
-        <Flower
-          class="absolute -left-10 -bottom-10 w-32 lg:left-0 lg:bottom-0 lg:w-60"
+        <Image
+            slot="media"
+            src={MediaStylizacjeZGumkamiFrancaUGCFashionLifestyle}
+            alt="Zdjęcie produktu na smartfonie"
+            class="w-[20rem]"
         />
-      </div>
-    </div>
-    <div class="lg:col-start-2 lg:row-start-1 lg:row-span-2 p-6 flex flex-col">
-      <p
-        class="w-[19rem] font-poppins font-light self-center lg:mr-16 lg:self-start text-center lg:text-left"
-      >
-        Mam 24 lata.
-        <br />
-        Od dzieciństwa szukałam swojego miejsca w artystycznym świecie. Próbowałam
-        odnaleźć go w śpiewie solowym, pisaniu książek, modzie, blogowaniu, vlogowaniu,
-        prowadzeniu social mediów, tworzeniu grafik, pieczeniu i dekorowaniu tortów,
-        <br />graniu na gitarze i pianinie.
-        <br />
-        Z czasem traciłam zainteresowanie, a kiedy coś się nie udawało, zakładałam,
-        że odnoszę porażkę. Dzisiaj wiem, że moim powołaniem nie jest jedna rzecz,
-        lecz odkrywanie i realizacja w wielu.
-      </p>
-      <Image
-        src={QuoteCzujeZeNaprawdeZyje}
-        alt="Czuję się najbardziej żywa kiedy ciągle próbuję"
-        class="self-center lg:self-end w-80 mt-6"
-      />
-    </div>
-  </section>
-  <section
-    id="social-media"
-    class="mt-32 scroll-mt-32 grid grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
-  >
-    <Image
-      src={QuoteSocialMedia}
-      alt="social media"
-      class="mx-auto w-64 pb-8 sm:w-80 lg:col-start-1"
-    />
-    <div
-      class="mx-auto w-fit relative flex items-end gap-4 lg:gap-8 pb-8 lg:pb-16 pr-7 lg:pr-14 lg:col-start-2 lg:row-span-2"
+        <div slot="description" class="max-w-[26rem]">
+            <p>
+                Typ contentu: zdjęcia lifestyle (karuzela na IG)<br />
+                Produkt: gumki do włosów marki Franca<br />
+                Rola: koncepcja, stylizacje, zdjęcia, postprodukcja<br />
+                Kategoria: UGC – fashion / produkt w użyciu<br />
+                Cel: pokazanie wszechstronności produktu i jego dopasowania do różnych
+                okazji.
+            </p><p class="mt-8">
+                W tym projekcie postawiłam na przedstawienie gumek Franca jako
+                dodatku, który realnie towarzyszy w codziennym życiu – od
+                casualowego looku po bardziej kobiece stylizacje. Każda gumka
+                dopasowana była do innego klimatu i okazji, by najlepiej pokazać
+                ich styl oraz funkcjonalność.
+            </p>
+        </div>
+    </SimpleMediaAndDescription>
+    <PrzesuwaneKafelki />
+    <SimpleMediaAndDescription
+        name="Olejki do ust Your Kaya UGC Beauty / Produkt w użyciu"
     >
-      <Image
-        src={InstagramScreenshot}
-        widths={[572]}
-        sizes="572px"
-        alt="Instagram screenshot"
-        class="w-[9rem] lg:w-[18rem] border border-black"
-      />
-      <div
-        class="bg-[#665f20] w-[7rem] h-[10.5rem] lg:w-[14rem] lg:h-[21rem] border border-black"
-      >
-      </div>
-      <Image
-        src={HandWithBouquet}
-        widths={[768]}
-        sizes="768px"
-        alt="Bukiet kwiatów"
-        class="absolute right-0 bottom-0 w-[12rem] lg:w-[24rem]"
-      />
-      <div
-        class="absolute top-0 right-16 lg:top-[unset] lg:bottom-0 lg:right-[unset] lg:-left-48"
-      >
-        <PhoneInstagram />
-      </div>
-    </div>
-    <p
-      class="mx-auto p-6 pt-8 max-w-[23rem] font-poppins font-light lg:col-start-1 lg:row-start-2 text-center lg:text-left"
-    >
-      W 2024 roku postanowiłam spełnić swoje marzenie o prowadzeniu mediów
-      społecznościowych.
-      <br />
-      Równolegle pracuję, dlatego działalność w internecie stała się dodatkiem do
-      życia.
-      <br />
-      Dziś wiem, że nigdy nie czułam podobnej satysfakcji, niż ta powiązana z publikacją
-      tworzonych treści i budowaniem własnej społeczności.
-    </p>
-  </section>
-  <section
-    id="copywriting"
-    class="mx-auto mt-64 scroll-mt-32 pb-32 w-fit grid lg:gap-x-16 grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr] min-h-[36rem]"
-  >
-    <h1 class="sr-only">Copywriting</h1>
-    <Image
-      src={TitleCopywriting}
-      alt="copywriting"
-      class="mx-auto w-64 pb-8 sm:w-80 lg:col-start-2"
-    />
-    <div
-      class="mx-auto w-fit relative lg:col-start-1 lg:row-span-2 lg:row-start-1"
-    >
-      <Flower class="w-64 sm:w-96 -scale-x-100" />
-    </div>
-    <p
-      class="lg:col-start-2 lg:row-start-2 mx-auto flex flex-col items-center lg:items-end justify-end p-6 pt-8 max-w-[23rem] font-poppins font-light text-center lg:text-left"
-    >
-      W 2023 roku skończyłam studia językoznawcze. Realizowałam również kierunek
-      twórcze pisanie.
-      <br />
-      Wiem jak redagować teksty, które są poprawne gramatycznie, zgodne z zasadami
-      SEO, a przede wszystkim przyciągają uwagę odbiorcy.
-      <Image
-        class="relative lg:left-10 pt-8 w-72"
-        src={QuoteSlowoWieleZnaczy}
-        alt="Słowo wiele znaczy"
-      />
-    </p>
-  </section>
-  <section
-    id="ugc"
-    class="mx-auto mt-64 scroll-mt-32 pb-32 w-fit grid lg:gap-x-36 grid-cols-[auto] grid-rows-[auto_auto_1fr] lg:grid-cols[auto_auto] lg:grid-rows-[auto_1fr]"
-  >
-    <h1 class="sr-only">UGC</h1>
-    <Image
-      src={TitleUGC}
-      alt="UGC"
-      class="mx-auto w-32 pb-8 sm:w-48 lg:col-start-2"
-    />
-    <div
-      class="mx-auto w-fit relative lg:col-start-1 lg:row-span-2 lg:row-start-1"
-    >
-      <Image
-        src={HandWithFlower}
-        alt="Kwiat w mojej dłoni"
-        widths={[572]}
-        sizes="572px"
-        class="w-72 border border-black"
-      />
-    </div>
-    <p
-      class="lg:col-start-2 lg:row-start-2 mx-auto flex flex-col items-end justify-end px-6 pt-8 max-w-[20rem] font-poppins font-light text-center lg:text-left"
-    >
-      Po roku praktyki i wielu kursach tematycznych, jestem gotowa, by przenieść
-      swoje działania na wyższy, profesjonalny poziom.
-      <br />
-      Tworzę estetyczne, autentyczne treści wideo dla marek z branży lifestyle, beauty
-      i home decor.
-    </p>
-  </section>
-  <PortfolioSection />
-  <SimpleMediaAndDescription
-    name=" Stylizacje z gumkami Franca UGC Fashion / Lifestyle"
-  >
-    <Image
-      slot="title"
-      src={TitleStylizacjeZGumkamiFrancaUGCFashionLifestyle}
-      alt=" Stylizacje z gumkami Franca UGC Fashion / Lifestyle"
-      class="w-[28rem] mt-20"
-    />
-    <Image
-      slot="media"
-      src={MediaStylizacjeZGumkamiFrancaUGCFashionLifestyle}
-      alt="Zdjęcie produktu na smartfonie"
-      class="w-[20rem]"
-    />
-    <div slot="description" class="max-w-[26rem]">
-      <p>
-        Typ contentu: zdjęcia lifestyle (karuzela na IG)<br />
-        Produkt: gumki do włosów marki Franca<br />
-        Rola: koncepcja, stylizacje, zdjęcia, postprodukcja<br />
-        Kategoria: UGC – fashion / produkt w użyciu<br />
-        Cel: pokazanie wszechstronności produktu i jego dopasowania do różnych okazji.
-      </p><p class="mt-8">
-        W tym projekcie postawiłam na przedstawienie gumek Franca jako dodatku,
-        który realnie towarzyszy w codziennym życiu – od casualowego looku po
-        bardziej kobiece stylizacje. Każda gumka dopasowana była do innego
-        klimatu i okazji, by najlepiej pokazać ich styl oraz funkcjonalność.
-      </p>
-    </div>
-  </SimpleMediaAndDescription>
-  <PrzesuwaneKafelki />
-  <SimpleMediaAndDescription
-    name="Olejki do ust Your Kaya UGC Beauty / Produkt w użyciu"
-  >
-    <Image
-      slot="title"
-      src={TitleOlejkiDoUstYourKayaProduktWUzyciu}
-      alt="Olejki do ust Your Kaya UGC Beauty / Produkt w użyciu"
-      class="w-[28rem]"
-    />
-    <Image
-      slot="media"
-      src={MediaOlejkiDoUstYourKayaProduktWUzyciu}
-      alt="Zdjęcie produktu na smartfonie"
-      widths={[576]}
-      sizes="576px"
-      class="w-[18rem]"
-    />
-    <div slot="description" class="max-w-[25rem]">
-      <p>
-        Typ contentu: zdjęcia beauty (karuzela na Instagram)<br />
-        Produkt: olejki do ust marki Your Kaya<br />
-        Rola: koncepcja, stylizacja, zdjęcia, postprodukcja<br />
-        Kategoria: UGC – beauty / produkt w użyciu<br />
-        Cel: podkreślenie estetyki produktu i jego funkcji pielęgnacyjnej
-      </p><p class="mt-8">
-        W tej realizacji chciałam pokazać olejki Your Kaya jako codzienny, ale
-        wyjątkowy element pielęgnacji – coś, co jest naturalnym przedłużeniem
-        troski o siebie. Skupiłam się na subtelnych detalach: strukturze,
-        połysku, delikatnych gestach i minimalistycznej estetyce. Zdjęcia
-        utrzymane są w spójnym, czystym klimacie, który odzwierciedla charakter
-        marki.
-      </p>
-    </div>
-  </SimpleMediaAndDescription>
-  <YourKayaGrid />
-  <SimpleMediaAndDescription
-    name="Zestaw nosze sztuke UGC Fashion / try on haul"
-  >
-    <Image
-      slot="title"
-      src={TitleZestawNoszeSztukeUGCFashionTryOnHaul}
-      alt="Zestaw nosze sztuke UGC Fashion / try on haul"
-      class="w-[14rem]"
-    />
-    <video
-      controls
-      slot="media"
-      src={DRES}
-      class="w-[18rem] border border-black"></video>
-    <div slot="description" class="max-w-[25rem]">
-      <p>
-        Typ contentu: video Reels z voiceoverem<br />
-        Produkt: zestaw dresowy Noszę Sztukę<br />
-        Rola: koncepcja, stylizacja, nagranie, voiceover, montaż<br />
-        Kategoria: UGC – fashion / produkt w użyciu / body positive<br />
-        Cel: pokazanie dopasowania zestawu do midsize sylwetki + przekaz wspierający
-        akceptację ciała i wygodę noszenia
-      </p><p class="mt-8">
-        W tej rolce chciałam pokazać, że moda może być wygodna, dopasowana i
-        wspierająca – pewność siebie nie nosi rozmiaru:)<br />
-        Film nagrałam z voiceoverem o ciałopozytywności i swobodnym wyrażaniu siebie.
-      </p>
-    </div>
-  </SimpleMediaAndDescription>
-  <SimpleMediaAndDescription
-    name="Zestaw do stylizacji włosów Got2be UGC Beauty / Produkt w użyciu"
-  >
-    <Image
-      slot="title"
-      src={TitleZestawDoStylizacjiWlosow}
-      alt="Zestaw do stylizacji włosów Got2be UGC Beauty / Produkt w użyciu"
-      class="w-[28rem]"
-    />
-    <video
-      controls
-      slot="media"
-      src={MediaZestawDoStylizacjiWlosow}
-      class="w-[18rem] border border-black"></video>
-    <div slot="description" class="max-w-[25rem] lg:px-4">
-      <p>
-        Typ contentu: Reels – pokaz działania produktów (beauty
-        tutorial/styling)<br />
-        Produkt: klej stylizujący + lakier do włosów<br />
-        Rola: koncepcja, nagranie, stylizacja włosów, montaż, kreatywna oprawa (grafika
-        + elementy wiosenne)<br />
-        Kategoria: UGC – beauty/produkt w użyciu/włosy<br />
-        Cel: prezentacja działania dwóch produktów w praktyce
-      </p><p class="mt-8">
-        Ten Reels to stylizacyjna opowieść o dobrym dniu dla włosów – bez
-        względu na kaprysy pogody. Pokazałam dwa sposoby użycia zestawu: krem
-        stylizacyjny w sleek bunie i lakier utrwalający naturalne loki. Całość
-        uzupełniłam kwiatowym akcentem – forsycja podbiła żółtą grafikę
-        produktów i nadała filmowi świeży, wiosenny vibe.
-      </p>
-    </div>
-  </SimpleMediaAndDescription>
-  <SimpleMediaAndDescription name="Olejki do ust Your Kaya">
-    <Image
-      slot="title"
-      src={TitleOlejkiDoUstYourKayaEverydayLook}
-      alt="UGC Beauty / Everyday Look"
-    />
-    <video
-      controls
-      slot="media"
-      src={MediaOlejkiDoUstYourKayaEverydayLook}
-      class="w-[18rem] border border-black"></video>
-    <div slot="description" class="max-w-[24.9rem]">
-      <p>
-        Typ contentu: Reels – beauty – produkt w użyciu<br />
-        Produkt: 3 kolory olejków do ust marki Your Kaya<br />
-        Rola: koncepcja, stylizacje, nagranie, montaż, prezentacja produktu<br
+        <Image
+            slot="title"
+            src={TitleOlejkiDoUstYourKayaProduktWUzyciu}
+            alt="Olejki do ust Your Kaya UGC Beauty / Produkt w użyciu"
+            class="w-[28rem]"
         />
-        Kategoria: UGC – beauty / produkt w użyciu / stylizacje<br />
-        Cel: pokazanie, że każdy kolor olejku pasuje do innego nastroju i looku –
-        produkt na co dzień, bez kompromisów
-      </p><p class="mt-8">
-        W tej rolce pokazałam 3 odcienie olejków Your Kaya w akcji – każdy w
-        innym klimacie. Celem było uchwycenie ich naturalnego efektu, łatwości
-        aplikacji i tego, jak świetnie wpisują się w codzienne rytuały. Hasło
-        „Your Kaya – for everyday” było kluczem: każdy kolor to inny nastrój,
-        inny outfit, ale zawsze ten sam komfort i subtelne glow.
-      </p>
-    </div>
-  </SimpleMediaAndDescription>
-  <SimpleMediaAndDescription
-    name="Lampka nocna Westwing UGC Home Decor / Storytelling"
-  >
-    <Image
-      slot="title"
-      src={TitleLampkaNocnaWestwingUGCHomeDecorStorytelling}
-      alt="Lampka nocna Westwing UGC Home Decor / Storytelling"
-    />
-    <video
-      controls
-      slot="media"
-      src={MediaLampkaNocnaWestwingUGCHomeDecorStorytelling}
-      class="w-[18rem] border border-black"></video>
-    <div slot="description" class="max-w-[25rem]">
-      <p>
-        Typ contentu: TikTok – unboxing + stylizacja przestrzeni<br />
-        Produkt: lampka nocna marki Westwing<br />
-        Rola: koncepcja, nagranie, stylizacja wnętrza, montaż (z efektem graficznym)<br
+        <Image
+            slot="media"
+            src={MediaOlejkiDoUstYourKayaProduktWUzyciu}
+            alt="Zdjęcie produktu na smartfonie"
+            widths={[576]}
+            sizes="576px"
+            class="w-[18rem]"
         />
-        Kategoria: UGC – home decor / produkt w użyciu / slow content<br />
-        Cel: pokazanie produktu w użyciu, z naciskiem na estetykę, klimat i funkcjonalność
-      </p><p class="mt-8">
-        W tym TikToku pokazałam proces od pomysłu do gotowej aranżacji z lampką
-        Westwing w roli głównej. Na początku – wizualizacja inspiracji, potem
-        rozpakowanie produktu i układanie przestrzeni. Finalny efekt to
-        przytulne, osobiste miejsce do relaksu – zakończone sceną z gazetą i
-        spokojną chwilą. Całość w duchu slow living, z dbałością o detal i
-        spójność kolorów.
-      </p>
-    </div>
-  </SimpleMediaAndDescription>
-  <SimpleMediaAndDescription
-    name="Unboxing gumek Franca UGC Beauty / Produkt w użyciu/ voiceover"
-  >
-    <Image
-      slot="title"
-      src={TitleUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover}
-      alt="Unboxing gumek Franca UGC Beauty / Produkt w użyciu/ voiceover"
-    />
-    <video
-      controls
-      slot="media"
-      src={MediaUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover}
-      class="w-[18rem] border border-black"></video>
-    <div slot="description" class="max-w-[25rem]">
-      <p>
-        Typ contentu: TikTok/Reels – unboxing + voiceover<br />
-        Produkt: gumki do włosów marki Franca<br />
-        Rola: koncepcja, nagranie, stylizacja, voiceover, montaż <br />
-        Kategoria: UGC – beauty / produkt w użyciu <br />
-        Cel: pokazanie gumek Franca w akcji z komentarzem w tle
-      </p><p class="mt-8">
-        W tym unboxingu z voiceoverem pokazuję cały proces – od rozpakowania po
-        stylizację. Opowiadam o tym, jak gumki Franca wpływają na moją pewność
-        siebie i środowisko, bo są stworzone w duchu zero waste z materiałów z
-        drugiej ręki. Całość w naturalnym stylu, by produkt przyciągnął
-        najwięcej uwagi. Dodałam chwytliwy hak na początku i call to action na
-        końcu
-      </p>
-    </div>
-  </SimpleMediaAndDescription>
-  <SimpleMediaAndDescription
-    name="Wieczorna pielęgnacja z Basic Lab UGC YouTube / Skincare Routine"
-  >
-    <Image
-      slot="title"
-      src={TitleWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine}
-      alt="Wieczorna pielęgnacja z Basic Lab UGC YouTube / Skincare Routine"
-      class="lg:!w-[32rem]"
-    />
-    <a
-      slot="media"
-      href="https://youtu.be/FSCpDQ3aZA0?si=ulfS4CnZxBFsOIVN"
-      target="_blank"
-      rel="noreferrer"
-      class="self-center"
+        <div slot="description" class="max-w-[25rem]">
+            <p>
+                Typ contentu: zdjęcia beauty (karuzela na Instagram)<br />
+                Produkt: olejki do ust marki Your Kaya<br />
+                Rola: koncepcja, stylizacja, zdjęcia, postprodukcja<br />
+                Kategoria: UGC – beauty / produkt w użyciu<br />
+                Cel: podkreślenie estetyki produktu i jego funkcji pielęgnacyjnej
+            </p><p class="mt-8">
+                W tej realizacji chciałam pokazać olejki Your Kaya jako
+                codzienny, ale wyjątkowy element pielęgnacji – coś, co jest
+                naturalnym przedłużeniem troski o siebie. Skupiłam się na
+                subtelnych detalach: strukturze, połysku, delikatnych gestach i
+                minimalistycznej estetyce. Zdjęcia utrzymane są w spójnym,
+                czystym klimacie, który odzwierciedla charakter marki.
+            </p>
+        </div>
+    </SimpleMediaAndDescription>
+    <YourKayaGrid />
+    <SimpleMediaAndDescription
+        name="Torba ekologiczna Café Lisboa UGC fashion / lookbook"
     >
-      <Image
-        src={MediaWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine}
-        alt="Wieczorna pielęgnacja z Basic Lab UGC YouTube / Skincare Routine"
-        class="w-[20rem] lg:w-[36rem] border border-black"
-      />
-    </a>
-    <div slot="description" class="max-w-[28rem]">
-      <p>
-        Typ contentu: YouTube – tutorial / recenzja / skincare routine<br />
-        Produkt: produkty Basic Lab (np. żel do mycia twarzy, tonik, serum itp.)<br
+        <Image
+            slot="title"
+            src={TitleTorbaEkologicznaCafeLisboa}
+            alt="Torba ekologiczna Café Lisboa UGC fashion / lookbook"
+            class="w-[14rem]"
         />
-        Rola: koncepcja, nagranie, montaż, narracja, prezentacja produktów w użyciu<br
+        <video
+            controls
+            slot="media"
+            src={MediaTorbaEkologicznaCafeLisboa}
+            class="w-[18rem] border border-black"></video>
+        <div slot="description" class="max-w-[25rem]">
+            <p>
+                Typ contentu: video Reels, przegląd stylizacji<br />
+                Produkt: torba ekologiczna Cafe Lisboa <br />
+                Rola: koncepcja, stylizacje, nagranie, montaż<br />
+                Kategoria: UGC – fashion / produkt w użyciu / wielofunkcyjność<br
+                />
+                Cel: pokazanie odbiorcom, że torba Café Lisboa, to wysoce użyteczny
+                element garderoby, który nadaje się na wiele okazji.
+            </p>
+            <p class="mt-8">
+                W materiale chciałam pokazać, że torba może towarzyszyć w
+                różnych okazjach i może być wystylizowana z wieloma outfitami.
+                Ważnym elementem było też pokazanie autorskiej grafiki
+                znajdującej się na torbie.
+            </p>
+        </div>
+    </SimpleMediaAndDescription>
+    <SimpleMediaAndDescription
+        name="kosmetyki do pielęgnacji twarzy Basic Lab / UGC Beauty"
+    >
+        <Image
+            slot="title"
+            src={TitleKosmetykiDoPielegnacjiTwarzy}
+            alt="kosmetyki do pielęgnacji twarzy Basic Lab / UGC Beauty"
+            class="w-[14rem]"
         />
-        Kategoria: UGC – beauty / pielęgnacja skóry / tutorial<br />
-        Cel: pokazanie wieczornej rutyny pielęgnacyjnej z produktami Basic Lab, podkreślenie
-        ich działania na skórę w praktyce
-      </p><p class="mt-8">
-        W tym filmie pokazuję moją wieczorną pielęgnację skóry z produktami
-        Basic Lab. Całość nagrana w łazience, gdzie używam poszczególnych
-        produktów na żywo. Opowiadam o każdym z nich, dzieląc się moimi
-        doświadczeniami i tym, jak wpływają na moją skórę. Zależało mi na tym,
-        by film był jak najbardziej autentyczny – pokazuję produkty w realnym
-        użyciu, aby widzowie mogli zobaczyć, jak naprawdę działają w codziennej
-        pielęgnacji.
-      </p>
-    </div>
-  </SimpleMediaAndDescription>
-  <!-- <SimpleMediaAndDescription name="Żel do prania Coccolino UGC Home/ TikTok">
+        <video
+            controls
+            slot="media"
+            src={MediaKosmetykiDoPielegnacjiTwarzy}
+            class="w-[18rem] border border-black"></video>
+        <div slot="description" class="max-w-[25rem]">
+            <p>
+                Typ contentu: video Reels z voiceoverem<br />
+                Produkt: kosmetyki do pielęgnacji twarzy BasicLab <br />
+                Rola: koncepcja, stylizacja, nagranie, montaż<br />
+                Kategoria: UGC – Beauty / produkt w użyciu / skincare<br />
+                Cel: promowanie świadomej pielęgacji poprzez używanie dermokosmetyków.
+                <br />
+            </p>
+            <p class="mt-8">
+                Osobiste doświadczenia przedstawione w filmie mają na celu
+                budowanie wiarygodności marki BasicLab. Pokazanie efektów przed
+                i po wzbudza zaufanie i jest dowodem na skuteczność produktu. W
+                filmie chciałam zawrzeć przesłanie o samoakceptacji i czułości
+                względem siebie, która jest najlepszym antidotum na lepsze
+                samopoczucie.
+            </p>
+        </div>
+    </SimpleMediaAndDescription>
+    <SimpleMediaAndDescription
+        name="Zestaw nosze sztuke UGC Fashion / try on haul"
+    >
+        <Image
+            slot="title"
+            src={TitleZestawNoszeSztukeUGCFashionTryOnHaul}
+            alt="Zestaw nosze sztuke UGC Fashion / try on haul"
+            class="w-[14rem]"
+        />
+        <video
+            controls
+            slot="media"
+            src={DRES}
+            class="w-[18rem] border border-black"></video>
+        <div slot="description" class="max-w-[25rem]">
+            <p>
+                Typ contentu: video Reels z voiceoverem<br />
+                Produkt: zestaw dresowy Noszę Sztukę<br />
+                Rola: koncepcja, stylizacja, nagranie, voiceover, montaż<br />
+                Kategoria: UGC – fashion / produkt w użyciu / body positive<br
+                />
+                Cel: pokazanie dopasowania zestawu do midsize sylwetki + przekaz
+                wspierający akceptację ciała i wygodę noszenia
+            </p><p class="mt-8">
+                W tej rolce chciałam pokazać, że moda może być wygodna,
+                dopasowana i wspierająca – pewność siebie nie nosi rozmiaru:)<br
+                />
+                Film nagrałam z voiceoverem o ciałopozytywności i swobodnym wyrażaniu
+                siebie.
+            </p>
+        </div>
+    </SimpleMediaAndDescription>
+    <SimpleMediaAndDescription
+        name="Zestaw do stylizacji włosów Got2be UGC Beauty / Produkt w użyciu"
+    >
+        <Image
+            slot="title"
+            src={TitleZestawDoStylizacjiWlosow}
+            alt="Zestaw do stylizacji włosów Got2be UGC Beauty / Produkt w użyciu"
+            class="w-[28rem]"
+        />
+        <video
+            controls
+            slot="media"
+            src={MediaZestawDoStylizacjiWlosow}
+            class="w-[18rem] border border-black"></video>
+        <div slot="description" class="max-w-[25rem] lg:px-4">
+            <p>
+                Typ contentu: Reels – pokaz działania produktów (beauty
+                tutorial/styling)<br />
+                Produkt: klej stylizujący + lakier do włosów<br />
+                Rola: koncepcja, nagranie, stylizacja włosów, montaż, kreatywna oprawa
+                (grafika + elementy wiosenne)<br />
+                Kategoria: UGC – beauty/produkt w użyciu/włosy<br />
+                Cel: prezentacja działania dwóch produktów w praktyce
+            </p><p class="mt-8">
+                Ten Reels to stylizacyjna opowieść o dobrym dniu dla włosów –
+                bez względu na kaprysy pogody. Pokazałam dwa sposoby użycia
+                zestawu: krem stylizacyjny w sleek bunie i lakier utrwalający
+                naturalne loki. Całość uzupełniłam kwiatowym akcentem – forsycja
+                podbiła żółtą grafikę produktów i nadała filmowi świeży,
+                wiosenny vibe.
+            </p>
+        </div>
+    </SimpleMediaAndDescription>
+    <SimpleMediaAndDescription name="Olejki do ust Your Kaya">
+        <Image
+            slot="title"
+            src={TitleOlejkiDoUstYourKayaEverydayLook}
+            alt="UGC Beauty / Everyday Look"
+        />
+        <video
+            controls
+            slot="media"
+            src={MediaOlejkiDoUstYourKayaEverydayLook}
+            class="w-[18rem] border border-black"></video>
+        <div slot="description" class="max-w-[24.9rem]">
+            <p>
+                Typ contentu: Reels – beauty – produkt w użyciu<br />
+                Produkt: 3 kolory olejków do ust marki Your Kaya<br />
+                Rola: koncepcja, stylizacje, nagranie, montaż, prezentacja produktu<br
+                />
+                Kategoria: UGC – beauty / produkt w użyciu / stylizacje<br />
+                Cel: pokazanie, że każdy kolor olejku pasuje do innego nastroju i
+                looku – produkt na co dzień, bez kompromisów
+            </p><p class="mt-8">
+                W tej rolce pokazałam 3 odcienie olejków Your Kaya w akcji –
+                każdy w innym klimacie. Celem było uchwycenie ich naturalnego
+                efektu, łatwości aplikacji i tego, jak świetnie wpisują się w
+                codzienne rytuały. Hasło „Your Kaya – for everyday” było
+                kluczem: każdy kolor to inny nastrój, inny outfit, ale zawsze
+                ten sam komfort i subtelne glow.
+            </p>
+        </div>
+    </SimpleMediaAndDescription>
+    <SimpleMediaAndDescription
+        name="Lampka nocna Westwing UGC Home Decor / Storytelling"
+    >
+        <Image
+            slot="title"
+            src={TitleLampkaNocnaWestwingUGCHomeDecorStorytelling}
+            alt="Lampka nocna Westwing UGC Home Decor / Storytelling"
+        />
+        <video
+            controls
+            slot="media"
+            src={MediaLampkaNocnaWestwingUGCHomeDecorStorytelling}
+            class="w-[18rem] border border-black"></video>
+        <div slot="description" class="max-w-[25rem]">
+            <p>
+                Typ contentu: TikTok – unboxing + stylizacja przestrzeni<br />
+                Produkt: lampka nocna marki Westwing<br />
+                Rola: koncepcja, nagranie, stylizacja wnętrza, montaż (z efektem
+                graficznym)<br />
+                Kategoria: UGC – home decor / produkt w użyciu / slow content<br
+                />
+                Cel: pokazanie produktu w użyciu, z naciskiem na estetykę, klimat
+                i funkcjonalność
+            </p><p class="mt-8">
+                W tym TikToku pokazałam proces od pomysłu do gotowej aranżacji z
+                lampką Westwing w roli głównej. Na początku – wizualizacja
+                inspiracji, potem rozpakowanie produktu i układanie przestrzeni.
+                Finalny efekt to przytulne, osobiste miejsce do relaksu –
+                zakończone sceną z gazetą i spokojną chwilą. Całość w duchu slow
+                living, z dbałością o detal i spójność kolorów.
+            </p>
+        </div>
+    </SimpleMediaAndDescription>
+    <SimpleMediaAndDescription
+        name="Unboxing gumek Franca UGC Beauty / Produkt w użyciu/ voiceover"
+    >
+        <Image
+            slot="title"
+            src={TitleUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover}
+            alt="Unboxing gumek Franca UGC Beauty / Produkt w użyciu/ voiceover"
+        />
+        <video
+            controls
+            slot="media"
+            src={MediaUnboxingGumekFrancaUGCBeautyProduktWUzyciuVoiceover}
+            class="w-[18rem] border border-black"></video>
+        <div slot="description" class="max-w-[25rem]">
+            <p>
+                Typ contentu: TikTok/Reels – unboxing + voiceover<br />
+                Produkt: gumki do włosów marki Franca<br />
+                Rola: koncepcja, nagranie, stylizacja, voiceover, montaż <br />
+                Kategoria: UGC – beauty / produkt w użyciu <br />
+                Cel: pokazanie gumek Franca w akcji z komentarzem w tle
+            </p><p class="mt-8">
+                W tym unboxingu z voiceoverem pokazuję cały proces – od
+                rozpakowania po stylizację. Opowiadam o tym, jak gumki Franca
+                wpływają na moją pewność siebie i środowisko, bo są stworzone w
+                duchu zero waste z materiałów z drugiej ręki. Całość w
+                naturalnym stylu, by produkt przyciągnął najwięcej uwagi.
+                Dodałam chwytliwy hak na początku i call to action na końcu
+            </p>
+        </div>
+    </SimpleMediaAndDescription>
+    <SimpleMediaAndDescription
+        name="Wieczorna pielęgnacja z Basic Lab UGC YouTube / Skincare Routine"
+    >
+        <Image
+            slot="title"
+            src={TitleWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine}
+            alt="Wieczorna pielęgnacja z Basic Lab UGC YouTube / Skincare Routine"
+            class="lg:!w-[32rem]"
+        />
+        <a
+            slot="media"
+            href="https://youtu.be/FSCpDQ3aZA0?si=ulfS4CnZxBFsOIVN"
+            target="_blank"
+            rel="noreferrer"
+            class="self-center"
+        >
+            <Image
+                src={MediaWieczornaPielegnacjaZBasicLabUGCYouTubeSkincareRoutine}
+                alt="Wieczorna pielęgnacja z Basic Lab UGC YouTube / Skincare Routine"
+                class="w-[20rem] lg:w-[36rem] border border-black"
+            />
+        </a>
+        <div slot="description" class="max-w-[28rem]">
+            <p>
+                Typ contentu: YouTube – tutorial / recenzja / skincare routine<br
+                />
+                Produkt: produkty Basic Lab (np. żel do mycia twarzy, tonik, serum
+                itp.)<br />
+                Rola: koncepcja, nagranie, montaż, narracja, prezentacja produktów
+                w użyciu<br />
+                Kategoria: UGC – beauty / pielęgnacja skóry / tutorial<br />
+                Cel: pokazanie wieczornej rutyny pielęgnacyjnej z produktami Basic
+                Lab, podkreślenie ich działania na skórę w praktyce
+            </p><p class="mt-8">
+                W tym filmie pokazuję moją wieczorną pielęgnację skóry z
+                produktami Basic Lab. Całość nagrana w łazience, gdzie używam
+                poszczególnych produktów na żywo. Opowiadam o każdym z nich,
+                dzieląc się moimi doświadczeniami i tym, jak wpływają na moją
+                skórę. Zależało mi na tym, by film był jak najbardziej
+                autentyczny – pokazuję produkty w realnym użyciu, aby widzowie
+                mogli zobaczyć, jak naprawdę działają w codziennej pielęgnacji.
+            </p>
+        </div>
+    </SimpleMediaAndDescription>
+    <!-- <SimpleMediaAndDescription name="Żel do prania Coccolino UGC Home/ TikTok">
     <Image
       slot="title"
       src={TitleZelDoPraniaCoccolino}
@@ -652,22 +739,22 @@ import YourKayaGrid from './YourKayaGrid.astro';
     </div>
   </SimpleMediaAndDescription> -->
 
-  <Contact />
+    <Contact />
 </main>
 
 <style>
-  :global(.tiktok-embed) {
-    margin: 0 !important;
-  }
-
-  :global(.tiktok-embed > a) {
-    display: flex !important;
-    align-items: center;
-    padding: 0.5rem !important;
-
-    span {
-      line-height: 1.5;
-      margin: 0;
+    :global(.tiktok-embed) {
+        margin: 0 !important;
     }
-  }
+
+    :global(.tiktok-embed > a) {
+        display: flex !important;
+        align-items: center;
+        padding: 0.5rem !important;
+
+        span {
+            line-height: 1.5;
+            margin: 0;
+        }
+    }
 </style>
