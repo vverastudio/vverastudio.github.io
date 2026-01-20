@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import FrancaTitle from "../assets/franca-vintage-title.svg";
+import FrancaCollage from "../assets/franca-collage.webp";
+import FrancaPhone from "../assets/franca-phone.webp";
+---
+
+<div class="relative">
+    <section
+        class="mx-auto mt-20 mb-20 w-fit grid grid-cols-1 grid-rows-[auto_auto] lg:grid-cols-[auto,auto] lg:grid-rows-1 gap-x-16"
+    >
+        <h1 class="sr-only">Franca Vintage</h1>
+        <div
+            class="media mb-8 lg:mb-0 lg:col-start-1 lg:row-start-1 lg:row-span-2 flex items-center"
+        >
+            <Image
+                src={FrancaPhone}
+                alt="Zdjęcie produktu na smartfonie"
+                class="w-[20rem]"
+            />
+        </div>
+        <div
+            class="description mx-auto w-fit lg:col-start-2 lg:row-start-1 font-poppins font-light text-base"
+        >
+            <Image
+                src={FrancaCollage}
+                alt="Franca Vintage (tło)"
+                class="w-[28rem]"
+            />
+        </div>
+
+        <div
+            class="absolute inset-0 flex justify-center items-center mt-16 lg:mt-0 pointer-none"
+        >
+            <Image src={FrancaTitle} alt="Franca Vintage"> /> </Image>
+        </div>
+    </section>
+
+    <style>
+        .media {
+            align-self: center;
+            justify-self: center;
+        }
+
+        .description {
+            align-self: center;
+            justify-self: center;
+        }
+    </style>
+</div>
